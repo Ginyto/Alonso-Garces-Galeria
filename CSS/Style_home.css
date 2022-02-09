@@ -1,0 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.headzone{
+    display: flex;
+    background-color: brown;
+    flex-direction: column;
+}

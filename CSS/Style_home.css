@@ -9,10 +9,20 @@
     flex-direction: column;
 }
 
+#logo{
+    width: 400px;
+    padding-top: 20px;
+}
+
 .logotitre{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    height: min-content;
+    height: 200px;
+    
+
 }
 
 .menu{

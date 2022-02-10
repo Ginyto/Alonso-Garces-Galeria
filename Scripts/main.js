@@ -2,6 +2,8 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
 
+    count: 1,
+
     hello_there() {
         console.log("Hello there")
         alert("hello_there")
@@ -16,30 +18,61 @@ const jarvis = {
         console.log("link start")
 
         this.loading_photos()
+
+        //this.carousel()
         
         console.log("link out")
 
     },
 
+    carousel() {
+        images = document.getElementById("images")
+
+        images.setAttribute("animation-duration", "35s")
+        
+
+    },
+
+
 
     slide(dir) {
 
-        photo = document.getElementById(`photo${1}`)
+
+        photo = document.getElementById(`photo${this.count}`)
 
         photo_width = photo.getBoundingClientRect().width
 
-        next = document.getElementById(`photo${2}`)
+        
+        photo.style = "transition: all 5s ease;"
+
 
         console.log(photo)
 
         if (dir === "right") {
-            photo.style.transform = `translateX(-${photo_width}px)`
-            next.style.transform = `translateX(-${photo_width}px)`
+            
+            photo.style.transform = `translateX(-${photo_width}px)`//met la photo en dernier
+            
+            for (let index = 2; index <= 11; index++) {
+                next = document.getElementById(`photo${index}`)
+                next.style = "transition: all 5s ease;"
+                next.style.transform = `translateX(-${photo_width}px)`
+            }
+
+            this.count++
         }
+
+
+        else if (this.count == this.CAROUSEL_SIZE-1) {
+            this.count = 1
+        }
+
         else if (dir === "left") {
-            photo.style.transform = `translateX(${0}px)`
-            next.style.transform = `translateX(${0}px)`
+            //photo.style.transform = `translateX(0)`
+            next.style.transform = `translateX(${photo_width})`
+
         }
+
+        console.log(this.count)
 
     },
 

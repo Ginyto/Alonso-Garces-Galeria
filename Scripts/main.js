@@ -6,6 +6,11 @@ const jarvis = {
 
     standby() {
         this.loading_photos()
+        this.slide_right(document.getElementById)
+    },
+
+    slide_right(photo) {
+        photo.style.transform = "translateX(-80vh)"
     },
 
     create_photo(where, className, folder, no) {

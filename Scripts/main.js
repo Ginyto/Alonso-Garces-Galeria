@@ -1,40 +1,38 @@
 const jarvis = {
 
-    pathfinder(param) {
-        if (param == 0) {
-            document.location.pathname = "/Pages/Landing.html";
-        }
+    CAROUSEL_SIZE: 11,
 
-        if (param == 1) {
-            document.location.pathname = "/Pages/Flashcards.html";
-        }
 
-        if (param == 2) {
-                document.location.pathname = "/Pages/Addcarte.html";
-        }
+
+    standby() {
+        this.loading_photos()
+    },
+
+    create_photo(where, className, folder, no) {
         
-        if (param == 3) {
-            document.location.pathname = "/Pages/Gestionnaire.html";
-        }
+        images = document.getElementById(`${ where }`)
 
-        if (param == 4) {
-                document.location.pathname = "/Pages/Pomodoro.html";
-        }
+        photo = document.createElement("img")
 
-        if (param == 5) {
-                document.location.pathname = "/Pages/About.html";
-            }
+        photo.className = className
+
+        photo.src = `/Images/${folder}/${no}.jpg`
+
+        photo.alt = `photo ${no}`
+
+        images.appendChild(photo)
+
+        return photo
 
     },
 
+    loading_photos() {
 
-    image_scroll() {
-        
-    },
-
-    test() {
-        alert("test validé")
-        console.log(document.getElementById(""))
+        for (let index = 1; index <= this.CAROUSEL_SIZE; index++) {
+            this.create_photo("images","img_carousel","Carousel",index)
+        }
     }
 }
 
+
+jarvis.standby()

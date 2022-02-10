@@ -33,52 +33,25 @@
     justify-content: center;
     align-items: center;
     padding-top: 5vh;
-    flex-wrap: wrap;
 }
 
 .carousel_zone{
     width: 80vh;
-    overflow: hidden;
 }
 
 #images{
     display: flex;
-    animation-duration: 35s;
-    animation-name: carousel;
-    animation-iteration-count: infinite;
-
+    overflow: auto;
 }
-
 
 .img_carousel{
     width: 80vh;
     border-radius: 2%;
 }
 
-@keyframes carousel{
-    0% {
-        transform: translateX(0)
-    }
-
-    25% {
-        transform: translateX(-80vh)
-    }
-
-    50%{
-        transform: translateX(-160vh)
-    }
-
-    75% {
-        transform: translateX(-240vh)
-    }
-
-    100% {
-        transform: translateX(0)
-    }
-}
 
 .arrow{
-    width: 50px;
-    height: 50px;
-    padding: 150px;
+    width: 5vh;
+    height: 5vh;
+    padding: 15vh;
 }

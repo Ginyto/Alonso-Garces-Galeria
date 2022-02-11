@@ -40,17 +40,17 @@ const jarvis = {
 
         photo = document.getElementById(`photo${this.count}`)
 
+        console.log(photo)
+
         photo_width = photo.getBoundingClientRect().width
 
-        
         photo.style = "transition: all 5s ease;"
 
 
-        console.log(photo)
 
         if (dir === "right") {
             
-            photo.style.transform = `translateX(-${photo_width}px)`//met la photo en dernier
+            photo.style.transform = `translateX(-${photo_width}px)`
             
             for (let index = 2; index <= 11; index++) {
                 next = document.getElementById(`photo${index}`)
@@ -58,17 +58,17 @@ const jarvis = {
                 next.style.transform = `translateX(-${photo_width}px)`
             }
 
-            this.count++
-        }
+            setTimeout(() => {
+                photo.style = "transition: all 1s ease;"
+                photo.style.transform = `translateX(${photo_width*10}px)`
+            }, 4999);
 
 
-        else if (this.count == this.CAROUSEL_SIZE-1) {
-            this.count = 1
         }
 
         else if (dir === "left") {
-            //photo.style.transform = `translateX(0)`
-            next.style.transform = `translateX(${photo_width})`
+            photo.style.transform = `translateX(${0}px)`
+            next.style.transform = `translateX(${0}px)`
 
         }
 

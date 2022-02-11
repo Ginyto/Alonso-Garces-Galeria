@@ -11,8 +11,8 @@
 
 #logo{
     width: 40vh;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
 }
 
 .logotitre{
@@ -25,6 +25,29 @@
     display: flex;
     height: 5vh;
     background-color: #D40004;
+    justify-content: center;
+}
+
+.burger_zone{
+    display: flex;
+
+    width: 5vh;
+    height: 5vh;
+    background-color: aquamarine;
+    padding-right: 1vh;
+    
+    flex-direction: column;
+
+
+    justify-content: space-between;
+}
+
+
+
+.hamburger{
+    height: 0.25vh;
+    width: 4vh;
+    background-color: black;
 }
 
 
@@ -32,11 +55,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1vh;
+
 }
 
 .carousel_zone{
     width: 90vh;
+    padding: 1vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
 }
 
 #images{
@@ -50,10 +76,3 @@
     max-width: 100%;
 }
 
-
-
-.arrow{
-    width: 5vh;
-    height: 5vh;
-    padding: 15vh;
-}

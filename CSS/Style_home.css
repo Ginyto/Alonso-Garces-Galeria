@@ -32,11 +32,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5vh;
+    padding-top: 1vh;
 }
 
 .carousel_zone{
-    width: 80vh;
+    width: 90vh;
 }
 
 #images{
@@ -45,8 +45,9 @@
 }
 
 .img_carousel{
-    width: 80vh;
+    width: 100%;
     border-radius: 2%;
+    max-width: 100%;
 }
 
 

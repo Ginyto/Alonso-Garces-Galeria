@@ -41,7 +41,7 @@
 
 #images{
     display: flex;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .img_carousel{

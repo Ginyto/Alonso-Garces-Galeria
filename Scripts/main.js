@@ -2,8 +2,6 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
 
-    count: 1,
-
     hello_there() {
         console.log("Hello there")
         alert("hello_there")
@@ -19,60 +17,75 @@ const jarvis = {
 
         this.loading_photos()
 
-        //this.carousel()
+        this.carousel(6)
         
         console.log("link out")
 
     },
 
-    carousel() {
-        images = document.getElementById("images")
 
-        images.setAttribute("animation-duration", "35s")
+    /**
+     * Slide la photo vers la droite
+     * @param {*} no numero de la photo
+     * @param {*} tour numero du tour de boucle
+     */
+    slide(no,tour) {
+
+
+        photo = document.getElementById(`photo${no}`)
+
+        //console.log(photo)
+
+        photo_width = photo.getBoundingClientRect().width
+
+        photo.style = "transition: all 5s ease;"
+        
+        photo.style.transform = `translateX(-${photo_width*tour}px)`
+
         
 
     },
 
 
+    /**
+     * Fais slider tout le carousel
+     */
+    superslides() {
 
-    slide(dir) {
-
-
-        photo = document.getElementById(`photo${this.count}`)
-
-        console.log(photo)
-
-        photo_width = photo.getBoundingClientRect().width
-
-        photo.style = "transition: all 5s ease;"
-
-
-
-        if (dir === "right") {
-            
-            photo.style.transform = `translateX(-${photo_width}px)`
-            
-            for (let index = 2; index <= 11; index++) {
-                next = document.getElementById(`photo${index}`)
-                next.style = "transition: all 5s ease;"
-                next.style.transform = `translateX(-${photo_width}px)`
-            }
-
-            setTimeout(() => {
-                photo.style = "transition: all 1s ease;"
-                photo.style.transform = `translateX(${photo_width*10}px)`
-            }, 4999);
-
-
+        for (let index = 1; index <= jarvis.CAROUSEL_SIZE; index++) {
+            this.slide(index,selcoura)
         }
 
-        else if (dir === "left") {
-            photo.style.transform = `translateX(${0}px)`
-            next.style.transform = `translateX(${0}px)`
+    },
+    
 
+
+    /**
+     * Gere le carousel à interval de seconde défini
+     */
+    carousel(sec) {
+        console.log("Début du carousel")
+        selcoura = 1
+        setInterval(this.setcarousel,sec*1000)
+    },
+
+
+
+    /**
+     * Gere le timer du carousel
+     */
+    setcarousel() {
+
+        console.log(selcoura)
+
+        jarvis.superslides()
+
+        if (selcoura < jarvis.CAROUSEL_SIZE - 1){
+            selcoura++
         }
-
-        console.log(this.count)
+        else {
+            selcoura = 0
+        }
 
     },
 

@@ -24,8 +24,8 @@
 .menu{
     display: flex;
     height: 5vh;
-    background-color: #D40004;
-    justify-content: center;
+    /*background-color: #D40004;*/
+    justify-content: flex-end;
 }
 
 .burger_zone{
@@ -33,21 +33,25 @@
 
     width: 5vh;
     height: 5vh;
-    background-color: aquamarine;
+    /*background-color: aquamarine;*/
     padding-right: 1vh;
     
     flex-direction: column;
 
 
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
 
 .hamburger{
-    height: 0.25vh;
+    height: 0.5vh;
     width: 4vh;
     background-color: black;
+}
+
+#ham{
+    
 }
 
 

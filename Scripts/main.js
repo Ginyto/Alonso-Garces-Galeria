@@ -25,11 +25,79 @@ const jarvis = {
 
     },
 
+    pathfinder(param) {
+        if (param == 0) {
+            document.location.pathname = "/Pages/home.html";
+        }
+
+        if (param == 1) {
+            document.location.pathname = "/Pages/exposiciones.html";
+        }
+
+        if (param == 2) {
+                document.location.pathname = "/Pages/Addcarte.html";
+        }
+        
+        if (param == 3) {
+            document.location.pathname = "/Pages/Gestionnaire.html";
+        }
+
+        if (param == 4) {
+                document.location.pathname = "/Pages/Pomodoro.html";
+        }
+
+        if (param == 5) {
+                document.location.pathname = "/Pages/About.html";
+        }
+
+    },
+
+    dark_mode() {
+        const page = document.querySelector('*')
+        const hamburger = document.querySelector('.hamburger')
+        const burger_zone = document.querySelector('.burger_zone')
+        const logo = document.querySelector(".logo")
+
+        page.classList.toggle("dark_mode")
+        hamburger.classList.toggle('hamburger_dark')
+        burger_zone.classList.toggle("burger_zone_dark")
+
+        console.log(logo)
+
+        if (logo.alt == "El logo de la galeria blanco") {
+            console.log("el logo es blanco")
+            logo.alt = "El logo de la galeria negro"
+            logo.src = "/Images/Logos/clear_white.png"
+            console.log("el logo es negro")
+        }
+
+        else{
+            console.log("el logo es negro")
+            logo.alt = "El logo de la galeria blanco"
+            logo.src = "/Images/Logos/clear_black.png"
+            console.log("el logo es blanco")
+        }
+
+        
+        
+    
+    },
+
     hamburger() {
         const burger_zone = document.querySelector('.burger_zone')
+        const hamburger = document.querySelector('.hamburger')
+        const ham = document.querySelector('#ham')
+        const burger = document.querySelector('#burger')
+        const page = document.querySelector('*')
+        const logo = document.querySelector("#logo")
+
 
         burger_zone.addEventListener('click', () => {
             console.log("he touche me")
+            ham.classList.toggle('ham_active')
+            burger.classList.toggle('burger_active')
+
+            //this.dark_mode()
         })
 
     },

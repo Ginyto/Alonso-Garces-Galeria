@@ -4,15 +4,34 @@
     font-weight: bold;
 }
 
+.dark_mode{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+}
+
+
+/*Logo*/
+
 .headzone{
     display: flex;
     flex-direction: column;
 }
 
-#logo{
+.logo{
     width: 40vh;
-    padding-top: 1vh;
+    padding-top: 1.5vh;
     padding-bottom: 1vh;
+
+}
+
+.logo_dark{
+    width: 40vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+
 }
 
 .logotitre{
@@ -21,33 +40,49 @@
 
 }
 
+
+/*Menu*/
+
 .menu{
     display: flex;
     height: 5vh;
     /*background-color: #D40004;*/
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
+
+.menu_deroulant{
+    display: flex;
+    width: 100%;
+    /*background-color: yellow;*/
+    justify-content: space-between;
+}
+
+
+
+/*Burger*/
 
 .burger_zone{
     display: flex;
 
     width: 5vh;
     height: 5vh;
-    /*background-color: aquamarine;*/
-    padding-right: 1vh;
+
+    padding-left: 2vh;
     
     flex-direction: column;
-
 
     justify-content: space-around;
 }
 
 .burger_zone:hover div:nth-child(n){
-    background-color:black
+    background-color:black;
 
 }
 
+.burger_zone_dark:hover div:nth-child(n){
+    background-color:white;
 
+}
 
 .hamburger{
     height: 0.5vh;
@@ -55,9 +90,44 @@
     background-color: grey;
 }
 
+.hamburger_dark{
+    height: 0.5vh;
+    width: 4vh;
+    background-color: white
+}
+
+#ham{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 1s ease;
+}
+
+.ham_active{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 2s ease;
+    transform: rotateZ(45deg);
+    background-color: #D40004;
+}
+
+.burger_active{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 2s ease;
+    transform: translateY(-2.5vh) rotateZ(-45deg);
+    background-color: #D40004;
+}
+
+#burger{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 1s ease;
+
+}
 
 
 
+/*CAROUSEl*/
 
 .carousel{
     display: flex;

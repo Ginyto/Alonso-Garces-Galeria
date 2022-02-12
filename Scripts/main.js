@@ -18,8 +18,19 @@ const jarvis = {
         this.loading_photos()
 
         this.carousel(6)
+
+        this.hamburger()
         
         console.log("link out")
+
+    },
+
+    hamburger() {
+        const burger_zone = document.querySelector('.burger_zone')
+
+        burger_zone.addEventListener('click', () => {
+            console.log("he touche me")
+        })
 
     },
 
@@ -32,7 +43,7 @@ const jarvis = {
     slide(no,tour) {
 
 
-        photo = document.getElementById(`photo${no}`)
+        const photo = document.getElementById(`photo${no}`)
 
         //console.log(photo)
 
@@ -100,9 +111,9 @@ const jarvis = {
      */
     create_photo(where, className, folder, no) {
         
-        images = document.getElementById(`${ where }`)
+        const images = document.getElementById(`${ where }`)
 
-        photo = document.createElement("img")
+        const photo = document.createElement("img")
 
         photo.className = className
 

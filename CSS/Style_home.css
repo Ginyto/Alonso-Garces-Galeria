@@ -42,17 +42,21 @@
     justify-content: space-around;
 }
 
+.burger_zone:hover div:nth-child(n){
+    background-color:black
+
+}
+
 
 
 .hamburger{
     height: 0.5vh;
     width: 4vh;
-    background-color: black;
+    background-color: grey;
 }
 
-#ham{
-    
-}
+
+
 
 
 .carousel{

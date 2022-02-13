@@ -17,14 +17,19 @@ const jarvis = {
 
         this.loading_photos()
 
-        this.carousel(6)
+        this.carousel(10)
 
         this.hamburger()
         
         console.log("link out")
 
     },
+    
 
+    /**
+     * Permet la navigation dans le site
+     * @param {*} param numero du site
+     */
     pathfinder(param) {
         if (param == 0) {
             document.location.pathname = "/Pages/home.html";
@@ -52,6 +57,10 @@ const jarvis = {
 
     },
 
+
+    /**
+     * Ajout du dark mode
+     */
     dark_mode() {
         const page = document.querySelector('*')
         const hamburger = document.querySelector('.hamburger')
@@ -90,12 +99,15 @@ const jarvis = {
         const burger = document.querySelector('#burger')
         const page = document.querySelector('*')
         const logo = document.querySelector("#logo")
+        const menu_deroulant = document.querySelector('.menu_deroulant')
+
 
 
         burger_zone.addEventListener('click', () => {
             console.log("he touche me")
             ham.classList.toggle('ham_active')
             burger.classList.toggle('burger_active')
+            menu_deroulant.classList.toggle('menu_deroulant_desactive')
 
             //this.dark_mode()
         })
@@ -117,7 +129,7 @@ const jarvis = {
 
         photo_width = photo.getBoundingClientRect().width
 
-        photo.style = "transition: all 5s ease;"
+        photo.style = "transition: all 7s ease;"
         
         photo.style.transform = `translateX(-${photo_width*tour}px)`
 

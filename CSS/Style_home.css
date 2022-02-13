@@ -47,15 +47,49 @@
     display: flex;
     height: 5vh;
     /*background-color: #D40004;*/
-    justify-content: flex-start;
+    justify-content: center;
+}
+
+.menu_deroulant_desactive{
+    transition: all 1s ease-in; 
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-items: center;
+
+    z-index: 2;
+
+    filter: blur(2px);
+
+
+    height: 50vh;
+    width: 30vh;
+
+    border-radius: 3%;
 }
 
 .menu_deroulant{
+    transition: all 1s ease-out; 
+    color:white;
+
+    transition: all 1s ease-in; 
     display: flex;
-    width: 100%;
-    /*background-color: yellow;*/
-    justify-content: space-between;
+    
+    flex-direction: column;
+    
+    align-items: center;
+
+
+    height: 50vh;
+    width: 30vh;
+
+    border-radius: 3%;
 }
+
+
+
+
 
 
 
@@ -145,7 +179,7 @@
 
 #images{
     display: flex;
-    overflow: hidden;
+    overflow:hidden;
 }
 
 .img_carousel{

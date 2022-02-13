@@ -17,7 +17,7 @@ const jarvis = {
 
         this.loading_photos()
 
-        this.carousel(10)
+        this.carousel(15)
 
         this.hamburger()
         
@@ -92,6 +92,10 @@ const jarvis = {
     
     },
 
+
+    /**
+     * Gestion du menu en mode hamburger
+     */
     hamburger() {
         const burger_zone = document.querySelector('.burger_zone')
         const ham = document.querySelector('#ham')
@@ -127,7 +131,7 @@ const jarvis = {
 
         photo_width = photo.getBoundingClientRect().width
 
-        photo.style = "transition: all 7s ease;"
+        photo.style = "transition: all 10s ease;"
         
         photo.style.transform = `translateX(-${photo_width*tour}px)`
 

@@ -94,11 +94,9 @@ const jarvis = {
 
     hamburger() {
         const burger_zone = document.querySelector('.burger_zone')
-        const hamburger = document.querySelector('.hamburger')
         const ham = document.querySelector('#ham')
         const burger = document.querySelector('#burger')
-        const page = document.querySelector('*')
-        const logo = document.querySelector("#logo")
+
         const menu_deroulant = document.querySelector('.menu_deroulant')
 
 
@@ -107,7 +105,7 @@ const jarvis = {
             console.log("he touche me")
             ham.classList.toggle('ham_active')
             burger.classList.toggle('burger_active')
-            menu_deroulant.classList.toggle('menu_deroulant_desactive')
+            menu_deroulant.classList.toggle('menu_deroulant_active')
 
             //this.dark_mode()
         })

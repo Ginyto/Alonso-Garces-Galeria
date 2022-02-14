@@ -22,6 +22,14 @@ const jarvis = {
             this.carousel(15)
         }
 
+        else if (no_page == 1) {
+
+        }
+
+        else if (no_page == 2) {
+            this.loading_photos("artists","img_artist","Carousel")
+        }
+
         this.hamburger()
         
         console.log("link out")

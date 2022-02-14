@@ -18,7 +18,7 @@ const jarvis = {
         console.log("link start")
 
         if (no_page == 0) {
-            this.loading_photos()
+            this.loading_photos("images","img_carousel","Carousel")
             this.carousel(15)
         }
 
@@ -44,7 +44,7 @@ const jarvis = {
         }
 
         if (param == 2) {
-                document.location.pathname = "/Pages/Addcarte.html";
+                document.location.pathname = "/Pages/artistas.html";
         }
         
         if (param == 3) {
@@ -70,6 +70,8 @@ const jarvis = {
         const hamburger = document.querySelector('.hamburger')
         const burger_zone = document.querySelector('.burger_zone')
         const logo = document.querySelector(".logo")
+        const sol = document.querySelector(".sol")
+
 
         page.classList.toggle("dark_mode")
         hamburger.classList.toggle('hamburger_dark')
@@ -81,6 +83,7 @@ const jarvis = {
             console.log("el logo es blanco")
             logo.alt = "El logo de la galeria negro"
             logo.src = "/Images/Logos/clear_white.png"
+            sol.src = "/Images/Icones/soleil_white.png"
             console.log("el logo es negro")
         }
 
@@ -88,6 +91,7 @@ const jarvis = {
             console.log("el logo es negro")
             logo.alt = "El logo de la galeria blanco"
             logo.src = "/Images/Logos/clear_black.png"
+            sol.src = "/Images/Icones/soleil_black.png"
             console.log("el logo es blanco")
         }
 
@@ -216,13 +220,11 @@ const jarvis = {
     },
 
 
-    /**
-     * Charge toutes les photos du carousel
-     */
-    loading_photos() {
+    
+    loading_photos(parent,id,src) {
 
         for (let index = 1; index <= this.CAROUSEL_SIZE; index++) {
-            this.create_photo("images","img_carousel","Carousel",index)
+            this.create_photo(parent,id,src,index)
         }
     }
 }

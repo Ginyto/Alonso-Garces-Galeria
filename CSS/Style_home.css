@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    transition: all 0.5s ease-in-out;
     font-weight: bold;
 }
 
@@ -52,7 +53,6 @@
 }
 
 .menu_deroulant{
-    color:white;
 
     transition: all 0.05s ease;
 
@@ -79,6 +79,7 @@
     display: flex;
     
     transition: all 0.5s ease;
+
     
     flex-direction: column;
     
@@ -128,7 +129,6 @@
 .burger_zone{
     display: flex;
 
-    padding-top: 1vh;
 
     width: 5vh;
     height: 5vh;
@@ -140,6 +140,8 @@
     flex-direction: column;
 
     justify-content: space-around;
+
+    padding-bottom: 1vh;
 }
 
 .burger_zone:hover div:nth-child(n){
@@ -197,16 +199,27 @@
 /*Settings */
 
 .menu_right{
-    width: 6vh;
-    height: 6vh;
+    display: flex;
+
+    width: 4vh;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
 }
 
 
 .mode_dark{
+    padding-right: 3vh;
+    width: 3vh;
+    height: 3vh;
+    /*background-color:#D40004*/
 
-    width: 5vh;
-    height: 5vh;
-    background-color:#D40004
+    
+}
+
+.sol{
+    width: 100%;
 }
 
 
@@ -239,3 +252,9 @@
     max-width: 100%;
 }
 
+/*Artists*/
+.artist_zone{
+    display: flex;
+    flex-direction: column;
+    
+}

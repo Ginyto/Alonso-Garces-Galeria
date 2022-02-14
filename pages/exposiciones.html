@@ -21,7 +21,7 @@
     
 </head>
 
-<body>
+<body onload="jarvis.standby()">
 
     <header class="header">
         <div class="headzone">
@@ -44,19 +44,34 @@
         </div>
 
         <nav class="menu_deroulant">
-
+        
             <div class="roulant" onclick="jarvis.pathfinder(0)">Home</div>
             <div class="roulant" onclick="jarvis.pathfinder(1)">Exposiciones</div>
             <div class="roulant" onclick="jarvis.pathfinder(2)">Artistas</div>
             <div class="roulant" onclick="jarvis.pathfinder(3)">Tienda</div>
             <div class="roulant" onclick="jarvis.pathfinder(4)">Informaciones</div>
             <div class="roulant" onclick="jarvis.pathfinder(5)">Contactos</div>
-
+        
         </nav>
 
     </div>
 
-    
+
+
+    <div class="carousel">
+
+
+        <div class="carousel_zone">
+
+
+            <div id="images">
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 
 

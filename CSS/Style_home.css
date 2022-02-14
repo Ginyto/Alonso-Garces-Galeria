@@ -46,6 +46,7 @@
 .menu{
     display: flex;
     height: 5vh;
+    width: 100% ;
     /*background-color: #D40004;*/
     justify-content: flex-start;
 }
@@ -64,6 +65,8 @@
     align-items: center;
 
     justify-content: space-around;
+
+    z-index: -1;
 
 
     height: 50vh;
@@ -103,6 +106,13 @@
 
 
     border-radius: 3%;
+}
+
+.roulant:hover{
+    transition: all 0.5s ease-in-out;
+
+    color: #D40004;
+    
 }
 
 

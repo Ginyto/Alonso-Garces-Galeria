@@ -8,16 +8,19 @@ const jarvis = {
     },
 
 
+
     /**
-     * Fonction qui lance les autres fonctions
+     * Gerer et lance les fonction en standby en fonction de la page
+     * @param {*} no_page Numero de la page
      */
-    standby() {
+    standby(no_page) {
 
         console.log("link start")
 
-        this.loading_photos()
-
-        this.carousel(15)
+        if (no_page == 0) {
+            this.loading_photos()
+            this.carousel(15)
+        }
 
         this.hamburger()
         
@@ -31,6 +34,7 @@ const jarvis = {
      * @param {*} param numero du site
      */
     pathfinder(param) {
+
         if (param == 0) {
             document.location.pathname = "/Pages/home.html";
         }
@@ -222,6 +226,3 @@ const jarvis = {
         }
     }
 }
-
-
-jarvis.standby()

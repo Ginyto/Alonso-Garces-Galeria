@@ -27,7 +27,7 @@ const jarvis = {
         }
 
         else if (no_page == 2) {
-            //this.loading_photos("artists","img_artist","Carousel")
+            this.loading_photos("artist_box","artists","Carousel")
         }
 
         this.hamburger()
@@ -201,15 +201,15 @@ const jarvis = {
 
     /**
      * Creer l'element img et les inject dans le parent
-     * @param {*} where parent
+     * @param {*} parent parent
      * @param {*} className nom de la className
      * @param {*} folder Nom du dossier des photo 
      * @param {*} no Numero des photo
      * @returns la photo créer
      */
-    create_photo(where, className, folder, no) {
+    create_photo(parent, className, folder, no) {
         
-        const images = document.getElementById(`${ where }`)
+        const images = document.getElementById(`${ parent }`)
 
         const photo = document.createElement("img")
 

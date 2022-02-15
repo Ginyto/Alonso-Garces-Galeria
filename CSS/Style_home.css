@@ -253,7 +253,7 @@
 }
 
 /*Artists*/
-.artist_zone{
+#artist_zone{
     display: flex;
     
     /*background-color: #D40004;*/

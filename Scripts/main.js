@@ -27,7 +27,7 @@ const jarvis = {
         }
 
         else if (no_page == 2) {
-            this.loading_photos("artists","img_artist","Carousel")
+            //this.loading_photos("artists","img_artist","Carousel")
         }
 
         this.hamburger()

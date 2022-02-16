@@ -47,7 +47,7 @@ const jarvis = {
     pathfinder(param) {
 
         if (param == 0) {
-            document.location.pathname = "/Pages/home.html";
+            document.location.pathname = "home.html";
         }
 
         if (param == 1) {

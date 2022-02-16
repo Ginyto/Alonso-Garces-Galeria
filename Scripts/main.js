@@ -93,16 +93,16 @@ const jarvis = {
         if (logo.alt == "El logo de la galeria blanco") {
             console.log("el logo es blanco")
             logo.alt = "El logo de la galeria negro"
-            logo.src = "/Images/Logos/clear_white.png"
-            sol.src = "/Images/Icones/soleil_white.png"
+            logo.src = "Images/Logos/clear_white.png"
+            sol.src = "Images/Icones/soleil_white.png"
             console.log("el logo es negro")
         }
 
         else{
             console.log("el logo es negro")
             logo.alt = "El logo de la galeria blanco"
-            logo.src = "/Images/Logos/clear_black.png"
-            sol.src = "/Images/Icones/soleil_black.png"
+            logo.src = "Images/Logos/clear_black.png"
+            sol.src = "Images/Icones/soleil_black.png"
             console.log("el logo es blanco")
         }
 
@@ -224,7 +224,7 @@ const jarvis = {
 
         photo.id = `photo${no}`
 
-        photo.src = `/Images/${folder}/${no}.jpg`
+        photo.src = `Images/${folder}/${no}.jpg`
 
         photo.alt = `photo ${no}`
 

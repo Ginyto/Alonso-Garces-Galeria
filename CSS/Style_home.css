@@ -253,14 +253,14 @@
 }
 
 /*Artists*/
-#artist_zone{
+.artist_zone{
     display: flex;
     
     /*background-color: #D40004;*/
     justify-content: center;
 }
 
-.artist_box{
+#artist_box{
     display: flex;
     /*background-color:aquamarine;*/
 

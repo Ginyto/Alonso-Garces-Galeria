@@ -1,6 +1,7 @@
 const jarvis = {
 
     CAROUSEL_SIZE: 11,
+    ARTISTAS_SIZE: 11,
 
     hello_there() {
         console.log("Hello there")
@@ -18,16 +19,18 @@ const jarvis = {
         console.log("link start")
 
         if (no_page == 0) {
-            this.loading_photos("images","img_carousel","Carousel")
+            console.log("Bienvenido")
+            this.loading_photos("images","img_carousel","Carousel", this.CAROUSEL_SIZE)
             this.carousel(15)
         }
 
-        else if (no_page == 1) {
+        if (no_page == 1) {
 
         }
 
         else if (no_page == 2) {
-            this.loading_photos("artist_box","artists","Carousel")
+            console.log("Artistas")
+            this.loading_photos("artist_box","artists","Carousel", this.ARTISTAS_SIZE)
         }
 
         this.hamburger()
@@ -208,8 +211,12 @@ const jarvis = {
      * @returns la photo créer
      */
     create_photo(parent, className, folder, no) {
+
+        console.log(parent)
         
-        const images = document.getElementById(`${ parent }`)
+        const images = document.getElementById(`${parent}`)
+        
+        console.log(images)
 
         const photo = document.createElement("img")
 
@@ -229,9 +236,9 @@ const jarvis = {
 
 
     
-    loading_photos(parent,id,src) {
+    loading_photos(parent,id,src, size) {
 
-        for (let index = 1; index <= this.CAROUSEL_SIZE; index++) {
+        for (let index = 1; index <= size; index++) {
             this.create_photo(parent,id,src,index)
         }
     }

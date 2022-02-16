@@ -51,23 +51,23 @@ const jarvis = {
         }
 
         if (param == 1) {
-            document.location.pathname = "/Pages/exposiciones.html";
+            document.location.pathname = "exposiciones.html";
         }
 
         if (param == 2) {
-                document.location.pathname = "/Pages/artistas.html";
+                document.location.pathname = "artistas.html";
         }
         
         if (param == 3) {
-            document.location.pathname = "/Pages/Gestionnaire.html";
+            document.location.pathname = "Gestionnaire.html";
         }
 
         if (param == 4) {
-                document.location.pathname = "/Pages/Pomodoro.html";
+                document.location.pathname = "Pomodoro.html";
         }
 
         if (param == 5) {
-                document.location.pathname = "/Pages/About.html";
+                document.location.pathname = "About.html";
         }
 
     },

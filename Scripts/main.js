@@ -20,7 +20,7 @@ const jarvis = {
 
         if (no_page == 0) {
             console.log("Bienvenido")
-            this.loading_photos("images","img_carousel","Carousel", this.CAROUSEL_SIZE)
+            this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
             this.carousel(15)
         }
 
@@ -30,7 +30,7 @@ const jarvis = {
 
         else if (no_page == 2) {
             console.log("Artistas")
-            this.loading_photos("artist_box","artists","Carousel", this.ARTISTAS_SIZE)
+            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
         this.hamburger()

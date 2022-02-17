@@ -149,11 +149,13 @@ body{
     width: 5vh;
     height: 5vh;
 
-    z-index: 50;
+    z-index: 99;
 
     flex-direction: column;
 
     justify-content: space-around;
+
+    margin-top: 1vh;
 
 }
 

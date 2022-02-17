@@ -14,8 +14,6 @@
 }
 
 
-
-
 .dark_mode{
     font-weight: bold;
     transition: all 0.5s ease-in-out;
@@ -54,6 +52,7 @@
 /*Menu*/
 
 .menu{
+    padding-top: 1vh;
     display: flex;
     height: 5vh;
     width: 100%;
@@ -139,19 +138,15 @@
 .burger_zone{
     display: flex;
 
-
     width: 5vh;
     height: 5vh;
 
     z-index: 50;
 
-    padding-left: 2vh;
-    
     flex-direction: column;
 
     justify-content: space-around;
 
-    padding-bottom: 1vh;
 }
 
 .burger_zone:hover div:nth-child(n){
@@ -211,7 +206,8 @@
 .menu_right{
     display: flex;
 
-    width: 4vh;
+    width: 7vh;
+    height: 4vh;
 
     justify-content: center;
     align-items: center;
@@ -221,12 +217,10 @@
 
 
 .mode_dark{
-    padding-right: 3vh;
+    padding-right: 1vh;
     width: 3vh;
     height: 3vh;
-    /*background-color:#D40004*/
-
-    
+    /*background-color:yellow;*/
 }
 
 .sol{

@@ -3,17 +3,19 @@
     padding: 0;
     margin: 0;
     transition: all 0.5s ease-in-out;
-    font-weight: bold;
 }
 
 @font-face {
-        font-family: glacial indifference;
-        src: url("http://cargocollective.com/hanken/Glacial-Indifference");
+        font-family: glacial;
+        src: url("/glacial-indifference/GlacialIndifference-Regular.otf");
+
 }
 
 body{
     font-family: glacial;
 }
+
+
 
 .body_zone{
     overflow: hidden;

@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/CSS/Style_home.css">
+    <link rel="stylesheet" href="CSS/Style_home.css">
 
 
-    <link rel="shortcut icon" href="/Images/Logos/agg.png" type="image/png">
-    <link rel="icon" href="/Images/Logos/agg.png" type="image/png">
-    <link rel="apple-touch-icon" href="/Images/Logos/agg.png">
+    <link rel="shortcut icon" href="Images/Logos/agg.png" type="image/png">
+    <link rel="icon" href="Images/Logos/agg.png" type="image/png">
+    <link rel="apple-touch-icon" href="Images/Logos/agg.png">
     
 
     <title>Alonso Garces Galeria</title>
@@ -27,69 +27,77 @@
         <div class="headzone">
 
             <div class="logotitre">
-                <img class="logo" src="/Images/Logos/clear_black.png" alt="El logo de la galeria blanco">
+                <img class="logo" src="Images/Logos/clear_black.png" alt="El logo de la galeria blanco">
 
             </div>
 
 
 
         </div>
-
-
-
     </header>
 
-    <div class="menu">
+    <div class="body_zone">
 
-        <div class="menu_left">
-            <div class="burger_zone">
-            
-                <div class="hamburger" id="ham"> </div>
-                <div class="hamburger" id="burger"> </div>
-            
+        <div class="menu">
+
+            <div class="menu_left">
+                <div class="burger_zone">
+
+                    <div class="hamburger" id="ham"> </div>
+                    <div class="hamburger" id="burger"> </div>
+
+                </div>
+
+                <nav class="menu_deroulant">
+
+                    <div class="roulant" onclick="jarvis.pathfinder(0)">Bienvenida</div>
+                    <div class="roulant" onclick="jarvis.pathfinder(1)">Exposiciones</div>
+                    <div class="roulant" onclick="jarvis.pathfinder(2)">Artistas</div>
+                    <div class="roulant" onclick="jarvis.pathfinder(3)">Tienda</div>
+                    <div class="roulant" onclick="jarvis.pathfinder(4)">Informaciones</div>
+                    <div class="roulant" onclick="jarvis.pathfinder(5)">Contactos</div>
+
+                </nav>
             </div>
-            
-            <nav class="menu_deroulant">
-            
-                <div class="roulant" onclick="jarvis.pathfinder(0)">Bienvenida</div>
-                <div class="roulant" onclick="jarvis.pathfinder(1)">Exposiciones</div>
-                <div class="roulant" onclick="jarvis.pathfinder(2)">Artistas</div>
-                <div class="roulant" onclick="jarvis.pathfinder(3)">Tienda</div>
-                <div class="roulant" onclick="jarvis.pathfinder(4)">Informaciones</div>
-                <div class="roulant" onclick="jarvis.pathfinder(5)">Contactos</div>
-            
-            </nav>
-        </div>
 
 
 
-        <div class="menu_right">
+            <div class="name_zone">
+                <h1 class="page_name">Artistas</h1>
+            </div>
+
+
+            <div class="menu_right">
                 <div class="settings">
                     <div class="mode_dark">
-                        <img class="sol" src="/Images/Icones/soleil_black.png" alt="nsol" onclick="jarvis.dark_mode()">
+                        <img class="sol" src="Images/Icones/soleil_black.png" alt="nsol" onclick="jarvis.dark_mode()">
                     </div>
                 </div>
-        </div>
-
-
-    </div>
-
-
-
-    <div class="artist_zone">
-
-
-        <div id="artist_box">
+            </div>
 
 
         </div>
 
 
+        <div class="artist_zone">
+        
+        
+            <div id="artist_box">
+        
+        
+            </div>
+        
+        
+        </div>
+
+        
     </div>
 
 
 
-<script src="/Scripts/main.js"></script>
+
+
+<script src="Scripts/main.js"></script>
 </body>
 
 

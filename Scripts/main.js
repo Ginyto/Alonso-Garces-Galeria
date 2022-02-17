@@ -55,7 +55,7 @@ const jarvis = {
         }
 
         if (param == 2) {
-                document.location.pathname = "Alonso-Garces-Galeria/Pages/Artistas.html";
+                document.location.pathname = "Alonso-Garces-Galeria/artistas.html";
         }
         
         if (param == 3) {

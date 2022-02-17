@@ -55,7 +55,7 @@ const jarvis = {
         }
 
         if (param == 2) {
-                document.location.pathname = "Pages/artistas.html";
+                document.location.pathname = "Pages/Artistas.html";
         }
         
         if (param == 3) {

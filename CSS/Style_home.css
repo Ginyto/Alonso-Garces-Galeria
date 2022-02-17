@@ -8,7 +8,7 @@
 
 .body_zone{
     overflow: hidden;
-    background-color:cornflowerblue;
+    /*background-color:cornflowerblue;*/
     margin-left: 1vw;
     margin-right: 1vw;
 }
@@ -292,5 +292,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-color: burlywood;
 }

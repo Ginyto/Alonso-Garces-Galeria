@@ -6,6 +6,15 @@
     font-weight: bold;
 }
 
+@font-face {
+        font-family: glacial indifference;
+        src: url("http://cargocollective.com/hanken/Glacial-Indifference");
+}
+
+body{
+    font-family: glacial;
+}
+
 .body_zone{
     overflow: hidden;
     /*background-color:cornflowerblue;*/

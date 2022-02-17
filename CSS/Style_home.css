@@ -1,0 +1,321 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+@font-face {
+        font-family: glacial;
+        src: url("/glacial-indifference/GlacialIndifference-Regular.otf");
+
+}
+
+body{
+    font-family: glacial;
+}
+
+
+
+.body_zone{
+    overflow: hidden;
+    /*background-color:cornflowerblue;*/
+    margin: 1vh;
+}
+
+
+.dark_mode{
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    background-color: black;
+}
+
+
+/*Logo*/
+
+.headzone{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    width: 40vh;
+
+}
+
+.logo_dark{
+    width: 40vh;
+    padding-top: 1.5vh;
+    padding-bottom: 1vh;
+
+}
+
+.logotitre{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+/*Menu*/
+
+.menu{
+    display: flex;
+    height: 5vh;
+    width: 100%;
+    /*background-color: yellow;*/
+    justify-content: space-between;
+}
+
+.menu_deroulant{
+
+    display: flex;
+
+    transition: all 0.05s ease;
+
+    transform: translateX(-30vh);
+    
+    flex-direction: column;
+    
+    align-items: center;
+
+    justify-content: space-around;
+
+    z-index: -1;
+
+
+    height: 50vh;
+    width: 30vh;
+
+    border-radius: 3%;
+}
+
+.menu_deroulant_active{
+    display: flex;
+    
+    transition: all 0.5s ease;
+
+    
+    flex-direction: column;
+    
+    align-items: center;
+
+    justify-content: space-around;
+
+    z-index: 1;
+
+    transform: translateX(2vh);
+
+
+    height: 50vh;
+    width: 25vh;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    background-color: rgba(255, 255, 255, .25);  
+
+    box-shadow: 0 0 1rem black;
+    
+    
+    color: black;
+
+
+
+    border-radius: 3%;
+}
+
+
+.roulant:hover{
+    transition: all 0.5s ease-in-out;
+
+    color: #D40004;
+    
+}
+
+
+.menu_left{
+    /* background-color: #D40004; */
+    z-index: 25;
+    width: 33%;
+}
+
+
+
+/*Burger*/
+
+.burger_zone{
+    display: flex;
+
+    width: 5vh;
+    height: 5vh;
+
+    z-index: 50;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+}
+
+.burger_zone:hover div:nth-child(n){
+    background-color:black;
+
+}
+
+.burger_zone_dark:hover div:nth-child(n){
+    background-color:white;
+
+}
+
+.hamburger{
+    height: 0.5vh;
+    width: 4vh;
+    background-color: grey;
+}
+
+.hamburger_dark{
+    height: 0.5vh;
+    width: 4vh;
+    background-color: white
+}
+
+#ham{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 1s ease;
+}
+
+.ham_active{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 2s ease;
+    transform: rotateZ(45deg);
+    background-color: #D40004;
+}
+
+.burger_active{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 2s ease;
+    transform: translateY(-2.5vh) rotateZ(-45deg);
+    background-color: #D40004;
+}
+
+#burger{
+    height: 0.5vh;
+    width: 4vh;
+    transition: all 1s ease;
+
+}
+
+
+/*Page Name*/
+.name_zone{
+    width: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: blanchedalmond; */
+}
+
+.page_name{
+    width: fit-content;
+    /*background-color: cadetblue;*/
+}
+
+
+/*Settings */
+
+.menu_right{
+    display: flex;
+
+    width: 33%;
+    
+
+    justify-content: flex-end;
+    align-items: center;
+
+    /* background-color: #D40004; */
+}
+
+
+.mode_dark{
+    padding-right: 1vh;
+    width: 3vh;
+    height: 3vh;
+    /*background-color:yellow;*/
+}
+
+.sol{
+    width: 3vh;
+}
+
+
+
+
+/*CAROUSEl*/
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.carousel_zone{
+    width: 90vh;
+    padding: 1vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
+}
+
+#images{
+    display: flex;
+    overflow:hidden;
+    
+}
+
+.img_carousel{
+    width: 100%;
+    border-radius: 2%;
+    max-width: 100%;
+}
+
+/*Artists*/
+.artist_zone{
+    display: flex;
+    
+    /*background-color: #D40004;*/
+    justify-content: center;
+}
+
+#artist_box{
+    display: flex;
+    /*background-color:aquamarine;*/
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.artists{
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    background-color:lightsalmon;
+    border: solid 1px black;
+}
+
+
+/*Exposiciones*/
+
+
+.expo{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: burlywood; */
+}

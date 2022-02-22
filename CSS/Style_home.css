@@ -282,7 +282,9 @@ body{
     max-width: 100%;
 }
 
+
 /*Artists*/
+
 .artist_zone{
     display: flex;
     
@@ -299,18 +301,17 @@ body{
     justify-content: center;
 }
 
+
 .artists{
     width: 300px;
     height: 200px;
     margin: 15px;
     background-color:lightsalmon;
-    border: solid 1px black;
 }
 
 
+
 /*Exposiciones*/
-
-
 .expo{
     width: 100%;
     display: flex;
@@ -322,12 +323,13 @@ body{
 .expo_zone{
     display: flex;
     justify-content: center;
-    align-items: center;
+    
     flex-wrap: wrap;
 
 
     width: 100%;
-    background-color: aquamarine;
+    
+    /* background-color: aquamarine; */
 }
 
 
@@ -339,14 +341,15 @@ body{
     flex-wrap: wrap;
 
 
-    width: 50vh;
+    width: 100%;
 
 
-    border-radius: 2%;
+    padding: 0.5vh;
+    border-radius: 3%;
     margin: 1vh;
-    background-color: crimson;
 
 }
+
 
 .capsule{
     display: flex;
@@ -356,11 +359,16 @@ body{
     flex-wrap: wrap;
 
 
-    width: 20vh;
+    width: 50vh;
+    height: fit-content;
 
 
-    border-radius: 2%;
+    border-radius: 3%;
     margin: 1vh;
+
+    padding: 0.5vh;
+
+    background-color:lightgray;
 
 }
 
@@ -369,27 +377,66 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
+
+
+    border-radius: 3%;
     padding: 1vh;
-    /* background-color: deeppink; */
+    /* background-color:darkgreen; */
+}
+
+/* .date_titre{
+    
+} */
+
+.capsule_titre{
+    display: none;
 }
 
 .expo_img{
     display: flex;
+
+    width: 90vh;
+
     justify-content: center;
 
-    padding: 1vh;
-    /* background-color: darkcyan; */
+    flex-wrap: wrap;
+
 }
 
 .img_expo{
-    width: 80%;
+    width: 100%;
+    margin: 0.5vh;
+    border-radius: 3%;
 }
 
+
+.img_expo_plus{
+    display: none;
+}
+
+
+.img_expo_plus_active{
+    width: 100%;
+    margin: 0.5vh;
+    border-radius: 3%;
+    display: flex;
+}
+
+
 .expo_article{
+    display: none;
+
+}
+
+.expo_article_active{
     display: flex;
 
+
+    border-radius: 3%;
     padding: 1vh;
+
     /* background-color: blueviolet; */
 }
 

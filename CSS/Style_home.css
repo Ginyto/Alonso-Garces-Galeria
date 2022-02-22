@@ -319,6 +319,51 @@ body{
     /* background-color: burlywood; */
 }
 
+.expo_zone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    width: 100%;
+    background-color: aquamarine;
+}
+
+
+.capsule_active{
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+
+    width: 50vh;
+
+
+    border-radius: 2%;
+    margin: 1vh;
+    background-color: crimson;
+
+}
+
+.capsule{
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+
+    width: 20vh;
+
+
+    border-radius: 2%;
+    margin: 1vh;
+
+}
+
 .expo_titre{
     display: flex;
     flex-direction: column;

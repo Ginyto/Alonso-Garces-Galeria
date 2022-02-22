@@ -38,6 +38,15 @@ const jarvis = {
         console.log("link out")
 
     },
+
+
+    reading_capsule(id_cap) {
+        console.log("reading_capsule")
+        const capsule = document.querySelector(`#${id_cap}`);
+        capsule.classList.toggle("capsule")
+        capsule.classList.toggle("capsule_active")
+    
+    },
     
 
     /**

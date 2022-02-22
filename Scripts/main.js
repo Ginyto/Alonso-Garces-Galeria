@@ -40,11 +40,18 @@ const jarvis = {
     },
 
 
-    reading_capsule(id_cap) {
+    reading_capsule(id_cap, id_art) {
         console.log("reading_capsule")
-        const capsule = document.querySelector(`#${id_cap}`);
+
+        const capsule = document.querySelector(`#${id_cap}`)
+
+        const article = document.querySelector(`#${id_art}`)
+
         capsule.classList.toggle("capsule")
         capsule.classList.toggle("capsule_active")
+    
+        
+        article.classList.toggle("expo_article_active")
     
     },
     
@@ -245,7 +252,7 @@ const jarvis = {
 
 
     
-    loading_photos(parent,id,src, size) {
+    loading_photos(parent,id,src, size){
 
         for (let index = 1; index <= size; index++) {
             this.create_photo(parent,id,src,index)

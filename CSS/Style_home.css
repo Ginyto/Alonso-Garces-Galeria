@@ -329,7 +329,7 @@ body{
 
 
     width: 100%;
-    height: 1080px;
+    
     background-color: aquamarine;
 }
 
@@ -398,14 +398,35 @@ body{
 
 .expo_img{
     display: flex;
+
+    width: 90vh;
+
     justify-content: center;
-    /* background-color: darkcyan; */
+
+    flex-wrap: wrap;
+
+
 }
 
 .img_expo{
     width: 100%;
+    margin: 0.5vh;
     border-radius: 3%;
 }
+
+
+.img_expo_plus{
+    display: none;
+}
+
+
+.img_expo_plus_active{
+    width: 100%;
+    margin: 0.5vh;
+    border-radius: 3%;
+    display: flex;
+}
+
 
 .expo_article{
     display: none;

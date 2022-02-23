@@ -1,0 +1,35 @@
+{
+    "expo" : {
+
+        "amazonia": {
+
+            "date" : "Septiembre 13 / Octubre 8 de 2018",
+
+            "titre" : [
+                "Historia de Colombia y sus oligarquías",
+                "Caricaturas de Antonio Caballero",
+                "Amazoniade Maria Tereza Negreiros"
+            ],
+
+            "article" : [
+                "La presente exhibición se concentra en obras de la gran Serie Sobre el",
+                            "Amazonas, lugar donde nació la artista y donde su familia ha sido gran",
+                            "terrateniente. Tras la muerte de su padre Negreiros se dedica a pintar la selva",
+                            "en toda su inmensidad, su verdor, la presencia del agua, la tragedia de los",
+                            "incendios y también, últimamente, el optimismo de la naturaleza manifiesto en la florescencia.",
+                            "El Amazonas es un territorio amenazado y estas obras a través de sus",
+                            "argumentos desean no solo recordar la importancia de su existencia sino la",
+                            "necesidad de conservarlo. Su trabajo autobiográfico no solamente es expiatorio",
+                            "sino que al recabar sus recuerdos es capaz al mismo tiempo de ejercer una",
+                            "militancia ecológica capacitada para generar conciencia sobre un exuberante",
+                            "zona sometida a diferentes disputas y acosada en múltiples direcciones.",
+                            "Miguel González Curador"
+            ],
+
+            "src": [
+                "/Images/expo/2018/2/1.jpeg",
+                "/Images/expo/2018/2/1.jpeg"
+            ]
+        }
+    }
+}

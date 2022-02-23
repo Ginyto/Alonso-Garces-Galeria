@@ -2,10 +2,10 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
+    data: require("../database.json"),
 
     hello_there() {
         console.log("Hello there")
-        const data = require("../database.json")
     },
 
 

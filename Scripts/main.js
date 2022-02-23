@@ -5,7 +5,7 @@ const jarvis = {
 
     hello_there() {
         console.log("Hello there")
-        alert("hello_there")
+        const data = require("../database.json")
     },
 
 
@@ -17,6 +17,8 @@ const jarvis = {
     standby(no_page) {
 
         console.log("link start")
+
+        this.hello_there()
 
         if (no_page == 0) {
             console.log("Bienvenido")

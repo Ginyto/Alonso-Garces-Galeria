@@ -25,7 +25,7 @@ const jarvis = {
         if (no_page == 0) {
             console.log("Bienvenido")
             this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            this.carousel(15)
+            this.carousel(10)
         }
 
         if (no_page == 1) {

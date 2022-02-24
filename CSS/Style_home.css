@@ -497,7 +497,7 @@ body{
 
     flex-wrap: wrap;
 
-    margin-top: 20vh;
+    margin-top: 30vh;
 }
 
 .minimalist{
@@ -552,7 +552,6 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
 
     width: 50vh;
     height: 100%;

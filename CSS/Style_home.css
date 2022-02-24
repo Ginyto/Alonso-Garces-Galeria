@@ -493,17 +493,27 @@ body{
 
     width: 100%;
     
-    background-color: #D40004;
+    /* background-color: #D40004; */
 
     flex-wrap: wrap;
 
     margin-top: 20vh;
 }
 
+.minimalist{
+    width: 95%;
+    height: 0.1vh;
+    background-color:#D40004;
+    margin-bottom: 1vh;
+}
+
 .footer_zone{
     display: flex;
 
-    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: yellow; */
 
     flex-wrap: wrap;
 
@@ -520,41 +530,59 @@ body{
 
     justify-content: center;
 
-    width: 40vh;
+    width: 50vh;
     height: fit-content;
-    background-color:blue;
+    /* background-color:blue; */
+
+    margin-bottom: 1vh;
 }
 
 .protection{
-    width: 34vh;
-    height: 10vh;
-    background-color:darkorange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50vh;
+    height: fit-content;
+    /* background-color:darkorange; */
 }
 
 .contact{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
 
-    width: 81vh;
-    height: fit-content;
-    background-color: violet;
+    width: 50vh;
+    height: 100%;
+    
+    /* background-color: violet; */
+
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 1vh;
 }
 
 .logopro{
-    width: 3vh;
+    width: 5vh;
+}
+
+.logopro:hover{
+    width: 5vh;
+
+    transform: translateY(-1vh)
 }
 
 .hyperlien{
     display:flex;
     width: 100%;
     justify-content: space-around;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 
-    flex-wrap: wrap;
     height: fit-content;
+
+    margin-top: 3vh;
 }
 
 .mailpro{

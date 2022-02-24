@@ -47,7 +47,7 @@ body{
 .logotitre{
     display: flex;
     justify-content: center;
-
+    padding-top: 1vh;
 }
 
 
@@ -110,7 +110,7 @@ body{
 
     box-shadow: 0 0 1rem black;
 
-
+    margin-top: 2vh;
 
     border-radius: 3%;
 }
@@ -262,23 +262,24 @@ body{
     padding-bottom: 3vh;
     width: 100%;
     /* background-color: crimson; */
+    border-radius: 3%;
 }
 
 .carousel_zone{
     width: 101vh;
     padding-left: 1vh;
     padding-right: 1vh;
+    border-radius: 3%;
 }
 
 #images{
     display: flex;
     overflow:hidden;
-    
 }
 
 .img_carousel{
     width: 100%;
-    border-radius: 2%;
+    border-radius: 3%;
     max-width: 100%;
 }
 
@@ -405,24 +406,22 @@ body{
 
 }
 
-.img_expo{
-    width: 100%;
-    margin: 0.5vh;
-    border-radius: 3%;
-}
-
-
-.img_expo_plus{
+.imgs{
     display: none;
 }
 
 
-.img_expo_plus_active{
+
+.img_expo{
     width: 100%;
     margin: 0.5vh;
     border-radius: 3%;
     display: flex;
 }
+
+
+
+
 
 
 .expo_article{
@@ -467,6 +466,7 @@ body{
 
 .separatiste{
     display: flex;
+    display: none;
     justify-content: center;
 
     width: 100%;
@@ -478,4 +478,112 @@ body{
 .titre_separatif{
     font-size: 4vh;
     text-decoration: underline;
+}
+
+
+
+
+
+
+.pied{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    
+    /* background-color: #D40004; */
+
+    flex-wrap: wrap;
+
+    margin-top: 30vh;
+}
+
+.minimalist{
+    width: 95%;
+    height: 0.1vh;
+    background-color:#D40004;
+    margin-bottom: 1vh;
+}
+
+.footer_zone{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: yellow; */
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    height:fit-content;
+
+    margin: 1vh;
+}
+
+.localisation{
+    display:flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    width: 50vh;
+    height: fit-content;
+    /* background-color:blue; */
+
+    margin-bottom: 1vh;
+}
+
+.protection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50vh;
+    height: fit-content;
+    /* background-color:darkorange; */
+}
+
+.contact{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 50vh;
+    height: 100%;
+    
+    /* background-color: violet; */
+
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 1vh;
+}
+
+.logopro{
+    width: 5vh;
+}
+
+.logopro:hover{
+    width: 5vh;
+
+    transform: translateY(-1vh)
+}
+
+.hyperlien{
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    /* background-color: aquamarine; */
+
+    height: fit-content;
+
+    margin-top: 3vh;
+}
+
+.mailpro{
+    color:#D40004;
 }

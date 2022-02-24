@@ -18,14 +18,14 @@ const jarvis = {
      */
     standby(no_page) {
 
-        console.log("link start")
+        //console.log("link start")
 
         this.loadjson()
 
         if (no_page == 0) {
-            console.log("Bienvenido")
+            //console.log("Bienvenido")
             this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            this.carousel(15)
+            this.carousel(10)
         }
 
         if (no_page == 1) {
@@ -40,9 +40,11 @@ const jarvis = {
         this.hamburger()
 
         
-        console.log("link out")
+        //console.log("link out")
 
     },
+
+
 
 
     /**
@@ -58,9 +60,9 @@ const jarvis = {
 
                 this.write("date_titre", base.amazonia.titre)
         
-                this.picture("img_expo", base.amazonia.src[0])
+                this.picture("0", base.amazonia.src[0])
 
-                this.picture("img_expo_plus", base.amazonia.src[1])
+                this.picture("1", base.amazonia.src[1])
 
                 this.write_article("article_expo", base.amazonia.article)
 
@@ -112,11 +114,11 @@ const jarvis = {
 
         const cible = this.ciblage(target)
 
-        console.log(cible)
+        //console.log(cible)
 
         cible.innerHTML += text
 
-        console.log(cible)
+        //console.log(cible)
     },
     
     write_article(target,tab) {
@@ -127,17 +129,23 @@ const jarvis = {
     },
 
 
-    reading_capsule(id_cap, id_art, id_expo) {
+    reading_capsule(id_cap) {
         console.log("reading_capsule")
 
         const capsule = document.querySelector(`#${id_cap}`)
 
-        const article = document.querySelector(`#${id_art}`)
+        const image = capsule.children.item(0)
 
-        const expo_parent = document.querySelector(`#${id_expo}`)
+        const titre = capsule.children.item(1)
 
+        const article = capsule.children.item(2)
 
-        console.log(expo_parent)
+        
+        // console.log(image)
+
+        // console.log(titre)
+
+        // console.log(article)
 
         
 
@@ -145,11 +153,12 @@ const jarvis = {
         capsule.classList.toggle("capsule_active")
     
         article.classList.toggle("expo_article_active")
-        
-        expo_parent.children.item(1).classList.toggle("img_expo_plus_active")
+
+        image.children.item(1).classList.toggle("img_expo")
     
     },
     
+
 
     /**
      * Permet la navigation dans le site
@@ -199,7 +208,7 @@ const jarvis = {
         hamburger.classList.toggle('hamburger_dark')
         burger_zone.classList.toggle("burger_zone_dark")
 
-        console.log(logo)
+        //console.log(logo)
 
         if (logo.alt == "El logo de la galeria blanco") {
             console.log("el logo es blanco")
@@ -236,7 +245,7 @@ const jarvis = {
 
 
         burger_zone.addEventListener('click', () => {
-            console.log("he touche me")
+            //console.log("he touche me")
             ham.classList.toggle('ham_active')
             burger.classList.toggle('burger_active')
             menu_deroulant.classList.toggle('menu_deroulant_active')
@@ -287,7 +296,7 @@ const jarvis = {
      * Gere le carousel à interval de seconde défini
      */
     carousel(sec) {
-        console.log("Début du carousel")
+        //console.log("Début du carousel")
         selcoura = 1
         setInterval(this.setcarousel,sec*1000)
     },
@@ -299,7 +308,7 @@ const jarvis = {
      */
     setcarousel() {
 
-        console.log(selcoura)
+        //console.log(selcoura)
 
         jarvis.superslides()
 
@@ -323,11 +332,11 @@ const jarvis = {
      */
     create_photo(parent, className, folder, no) {
 
-        console.log(parent)
+        //console.log(parent)
         
         const images = document.getElementById(`${parent}`)
         
-        console.log(images)
+        //console.log(images)
 
         const photo = document.createElement("img")
 

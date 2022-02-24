@@ -3,10 +3,12 @@ const jarvis = {
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
 
+
     hello_there() {
         console.log("Hello there")
-        alert("hello_there")
+        console.log(this.data)
     },
+
 
 
 
@@ -17,6 +19,8 @@ const jarvis = {
     standby(no_page) {
 
         console.log("link start")
+
+        this.loadjson()
 
         if (no_page == 0) {
             console.log("Bienvenido")
@@ -34,9 +38,92 @@ const jarvis = {
         }
 
         this.hamburger()
+
         
         console.log("link out")
 
+    },
+
+
+    /**
+     * Charge le JSON file et en permet l'utilisation, permet de lancer les differentes fonction qui en depende
+     */
+    loadjson() {
+        fetch("database.json")
+            .then(reponse => reponse.json())
+            .then(data => {
+                //zone de lancement des fonction dependente de JSON
+                const base = data.expo
+                // console.log(base)
+
+                this.write("date_titre", base.amazonia.titre)
+        
+                this.picture("img_expo", base.amazonia.src[0])
+
+                this.picture("img_expo_plus", base.amazonia.src[1])
+
+                this.write_article("article_expo", base.amazonia.article)
+
+            })
+    },
+
+
+
+    /**
+     * Renvoie le l'objet html ciblé
+     * @param {*} target nom de la cible
+     * @returns objet hmtl
+     */
+    ciblage(target) {
+
+        const id = document.getElementById(`${target}`)
+
+        const classname = document.getElementsByClassName(`${target}`).item(0)
+
+        if (id != null) {
+
+            return id
+        }
+
+        else if (classname != null) {
+
+            return classname
+            
+        }
+
+        else {
+            console.log("erreur l'élément n'existe pas")
+        }
+    },
+
+
+    picture(target, src) {
+        pic = this.ciblage(target)
+        pic.src = src
+    },
+
+
+    /**
+     * Permet de cibler un element html et d'écrire dedans
+     * @param {*} target cible html
+     * @param {*} text texte à unjecté
+     */
+    write(target, text) {
+
+        const cible = this.ciblage(target)
+
+        console.log(cible)
+
+        cible.innerHTML += text
+
+        console.log(cible)
+    },
+    
+    write_article(target,tab) {
+        for (let index = 0; index < tab.length; index++) {
+            const element = tab[index]
+            this.write(target,element)
+        }
     },
 
 

@@ -20,16 +20,21 @@ const jarvis = {
 
         //console.log("link start")
 
-        this.loadjson()
+        this.hamburger()
 
         if (no_page == 0) {
             //console.log("Bienvenido")
+            this.loadjson(0)
+
             this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
             this.carousel(10)
         }
 
         if (no_page == 1) {
+            this.loadjson(1)
 
+            this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
+            this.carousel(10)
         }
 
         else if (no_page == 2) {
@@ -37,7 +42,6 @@ const jarvis = {
             this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
-        this.hamburger()
 
         
         //console.log("link out")
@@ -50,25 +54,42 @@ const jarvis = {
     /**
      * Charge le JSON file et en permet l'utilisation, permet de lancer les differentes fonction qui en depende
      */
-    loadjson() {
+    loadjson(no_page) {
         fetch("database.json")
             .then(reponse => reponse.json())
             .then(data => {
                 //zone de lancement des fonction dependente de JSON
-                const base = data.expo
+                const base = data
                 // console.log(base)
+                
+                this.write("map", base.sys.footer.map)
 
-                this.write("date_titre", base.amazonia.titre)
+                if (no_page == 0) {
+                    
+                }
+
+                else if (no_page == 1) {
+
+                    this.write("date_titre", base.expo.amazonia.titre)
         
-                this.picture("0", base.amazonia.src[0])
+                    this.picture("0", base.expo.amazonia.src[0])
 
-                this.picture("1", base.amazonia.src[1])
+                    this.picture("1", base.expo.amazonia.src[1])
 
-                this.write_article("article_expo", base.amazonia.article)
+                    this.write_article("article_expo", base.expo.amazonia.article)
+                }
+
+                else if (no_page == 2) {
+                    
+                }
+
 
             })
     },
 
+    loadfooter() {
+        
+    },
 
 
     /**
@@ -78,12 +99,20 @@ const jarvis = {
      */
     ciblage(target) {
 
-        const id = document.getElementById(`${target}`)
+        const id = document.getElementById(target)
 
-        const classname = document.getElementsByClassName(`${target}`).item(0)
+        // const test = document.getElementsByClassName("ubi").item(0)
+
+        // console.log("->",test)
+
+        // console.log("id ->", id)
+
+        const classname = document.getElementsByClassName(target).item(0)
+
+        // console.log("classname ->", classname)
 
         if (id != null) {
-
+            console.log(id)
             return id
         }
 

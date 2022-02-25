@@ -1,4 +1,14 @@
 {
+    "sys": {
+
+        "footer":{
+
+            "map" : "Horarios de la galería: Abierta al público de lunes a viernes de 10 a.m a 2:00 p.m. Entrada libre"
+
+        }
+    },
+
+
     "expo" : {
 
         "amazonia": {

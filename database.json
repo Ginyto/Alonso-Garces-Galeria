@@ -13,7 +13,10 @@
 
         "amazonia": {
 
-            "date" : "Septiembre 13 / Octubre 8 de 2018",
+            "date" : [
+                "Septiembre 13 / Octubre 8",
+                "2018"
+            ],
 
             "titre" : "''Historia de Colombia y sus oligarquías'' Caricaturas de Antonio Caballero",
 
@@ -37,8 +40,8 @@
             ],
 
             "src": [
-                "/Images/expo/2018/2/1.jpeg",
-                "/Images/expo/2018/2/2.jpeg"
+                "/Images/expo/amazonia/1.jpeg",
+                "/Images/expo/amazonia/2.jpeg"
             ]
         },
 

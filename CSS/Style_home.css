@@ -539,6 +539,11 @@ body{
     margin-bottom: 1vh;
 }
 
+.map{
+    display: flex;
+    justify-content: center;
+}
+
 .protection{
     display: flex;
     align-items: center;
@@ -583,7 +588,7 @@ body{
 
     height: fit-content;
 
-    margin-top: 3vh;
+    margin-top: 2vh;
 }
 
 .mailpro{

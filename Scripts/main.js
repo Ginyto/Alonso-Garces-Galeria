@@ -2,6 +2,7 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
+    nbr_capsule: 0,
 
 
     hello_there() {
@@ -62,7 +63,7 @@ const jarvis = {
                 const base = data
                 // console.log(base)
 
-                console.log(base.expo.amazonia.src.length)
+                //console.log(base.expo.amazonia.src.length)
                 
                 this.write("map", base.sys.footer.map)
 
@@ -71,6 +72,8 @@ const jarvis = {
                 }
 
                 else if (no_page == 1) {
+
+                    this.create_capsule("expo_zone", "cap0", 2)
 
                     this.write("date_titre", base.expo.amazonia.titre)
         
@@ -89,18 +92,99 @@ const jarvis = {
             })
     },
 
-    create_capsule(parent, id_capsule) {
+
+
+    /**
+     * Creation de capsule composer d'un titre une date des photos et de l'article qu'on vient injecter dans la zone parent
+     * @param {*} parent zone d'injection
+     * @param {*} id_capsule id de la capsule
+     * @param {*} nbr_photos nombre de photos a injecte
+     */
+    create_capsule(parent, id_capsule, nbr_photos) {
+
+        //squelette capsule
+
         const zone = this.ciblage(parent)
+
 
         const capsule = document.createElement('div')
 
         capsule.id = id_capsule
 
+        this.nbr_capsule++
+        
+
         capsule.className = "capsule"
 
-        capsule.onclick = `jarvis.reading_capsule(${id_capsule})`
+        capsule.onclick = function () { jarvis.reading_capsule(id_capsule) }
+
+        zone.appendChild(capsule)
+
+    
+        //insertion image
 
         const img = document.createElement('div')
+
+        img.className = "expo_img"
+
+
+        for (let index = 0; index < nbr_photos; index++) {
+
+            const photo = document.createElement('img')
+
+            if (index === 0) {
+                photo.className = "img_expo"
+            }
+
+            else {
+                photo.className = "imgs"
+            }
+
+            photo.id = index
+
+            img.appendChild(photo)
+
+        }
+
+        capsule.appendChild(img)
+
+
+        //insertion titre
+
+        const zone_titre = document.createElement('div')
+
+        zone_titre.className = "expo_titre"
+
+        const date = document.createElement('h2')
+
+        date.className = "date_titre"
+
+        const titre = document.createElement('h2')
+
+        titre.className = "capsule_titre"
+
+        zone_titre.appendChild(date)
+
+        zone_titre.appendChild(titre)
+
+        capsule.appendChild(zone_titre)
+
+
+        //insertion article
+
+        const zone_article = document.createElement("div")
+
+        zone_article.className = "expo_article"
+
+        const article = document.createElement('p')
+
+        article.className = "article_expo"
+
+        zone_article.appendChild(article)
+
+        capsule.appendChild(zone_article)
+
+
 
 
 
@@ -121,11 +205,11 @@ const jarvis = {
 
         // console.log("->",test)
 
-        // console.log("id ->", id)
+        //console.log("id ->", id)
 
         const classname = document.getElementsByClassName(target).item(0)
 
-        // console.log("classname ->", classname)
+        //console.log("classname ->", classname)
 
         if (id != null) {
             console.log(id)

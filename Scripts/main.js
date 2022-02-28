@@ -61,6 +61,8 @@ const jarvis = {
                 //zone de lancement des fonction dependente de JSON
                 const base = data
                 // console.log(base)
+
+                console.log(base.expo.amazonia.src.length)
                 
                 this.write("map", base.sys.footer.map)
 
@@ -87,8 +89,22 @@ const jarvis = {
             })
     },
 
-    loadfooter() {
-        
+    create_capsule(parent, id_capsule) {
+        const zone = this.ciblage(parent)
+
+        const capsule = document.createElement('div')
+
+        capsule.id = id_capsule
+
+        capsule.className = "capsule"
+
+        capsule.onclick = `jarvis.reading_capsule(${id_capsule})`
+
+        const img = document.createElement('div')
+
+
+
+
     },
 
 
@@ -128,6 +144,11 @@ const jarvis = {
     },
 
 
+    /**
+     * permet l'insertion d'une image selon la cible hmtl
+     * @param {*} target cible html
+     * @param {*} src path de la photo a inserer
+     */
     picture(target, src) {
         pic = this.ciblage(target)
         pic.src = src
@@ -145,11 +166,21 @@ const jarvis = {
 
         //console.log(cible)
 
-        cible.innerHTML += text
+        try {
+            cible.innerHTML += text
+        } catch (error) {
+            console("injection du texte à la cible html echoué", error)
+        }
 
         //console.log(cible)
     },
     
+
+    /**
+     * permet l'ecriture de plusieur ligne loading d'un JSON dans une cible hmtl
+     * @param {*} target cible html
+     * @param {*} tab tableau
+     */
     write_article(target,tab) {
         for (let index = 0; index < tab.length; index++) {
             const element = tab[index]
@@ -157,6 +188,12 @@ const jarvis = {
         }
     },
 
+
+
+    /**
+     *  Gere la lecture des capsule
+     * @param {*} id_cap numero de la capsule
+     */
 
     reading_capsule(id_cap) {
         console.log("reading_capsule")

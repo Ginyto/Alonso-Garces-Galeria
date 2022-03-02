@@ -79,21 +79,17 @@ const jarvis = {
 
                 else if (no_page == 1) {
 
-                    this.create_capsule("expo_zone", "cap0", base.expo.amazonia.src.length)
+                    this.create_capsule("expo_zone", "cap0", base.expo[base.expos[0]].src.length)
 
-                    this.write("date_titre", base.expo.amazonia.titre)
-        
-                    this.picture("0", base.expo.amazonia.src[0])
+                    this.fill_capsule("cap0", base, 0)
 
-                    this.picture("1", base.expo.amazonia.src[1])
 
-                    this.write_article("article_expo", base.expo.amazonia.article)
+                    this.create_capsule("expo_zone", "cap1", base.expo[base.expos[1]].src.length)
+
+                    this.fill_capsule("cap1", base, 1)
+
+
                 }
-
-                else if (no_page == 2) {
-                    
-                }
-
 
             })
     },
@@ -101,8 +97,30 @@ const jarvis = {
 
 
 
-    fill_capsule() {
+    fill_capsule(target, base, no_expo) {
+
+        const capsule = this.ciblage(target)
+
+        console.log(capsule)
         
+
+        // console.log(base.expos)
+        // console.log(base.expo)
+        // console.log(base.expo[base.expos[0]])
+
+        console.log(capsule.children.item(0).children.length)
+
+        this.write(capsule.children.item(1).children.item(0), base.expo[base.expos[no_expo]].titre)
+
+        for (let index = 0; index < capsule.children.item(0).children.length; index++) {
+
+            const element = capsule.children.item(0).children.item(index);
+            this.picture(element, base.expo[base.expos[no_expo]].src[index])
+
+        }
+
+        this.write_article(capsule.children.item(2).children.item(0), base.expo[base.expos[no_expo]].article)
+
     },
 
 
@@ -149,7 +167,7 @@ const jarvis = {
                 photo.className = "img_expo"
             }
 
-            else {
+            else if (index > 0) {
                 photo.className = "imgs"
             }
 
@@ -241,25 +259,25 @@ const jarvis = {
     },
 
 
+
+
     /**
      * permet l'insertion d'une image selon la cible hmtl
-     * @param {*} target cible html
+     * @param {*} cible cible html
      * @param {*} src path de la photo a inserer
      */
-    picture(target, src) {
-        pic = this.ciblage(target)
-        pic.src = src
+    picture(cible, src) {
+        cible.src = src
     },
+
 
 
     /**
      * Permet de cibler un element html et d'écrire dedans
-     * @param {*} target cible html
+     * @param {*} cible cible html
      * @param {*} text texte à unjecté
      */
-    write(target, text) {
-
-        const cible = this.ciblage(target)
+    write(cible, text) {
 
         //console.log(cible)
 
@@ -271,19 +289,21 @@ const jarvis = {
 
         //console.log(cible)
     },
-    
+
+
 
     /**
      * permet l'ecriture de plusieur ligne loading d'un JSON dans une cible hmtl
-     * @param {*} target cible html
+     * @param {*} cible cible html
      * @param {*} tab tableau
      */
-    write_article(target,tab) {
+    write_article(cible,tab) {
         for (let index = 0; index < tab.length; index++) {
             const element = tab[index]
-            this.write(target,element)
+            this.write(cible,element)
         }
     },
+
 
 
 
@@ -293,7 +313,7 @@ const jarvis = {
      */
 
     reading_capsule(id_cap) {
-        console.log("reading_capsule")
+        //console.log("reading_capsule")
 
         const capsule = document.querySelector(`#${id_cap}`)
 
@@ -310,14 +330,15 @@ const jarvis = {
 
         // console.log(article)
 
-        
-
         // capsule.classList.toggle("capsule")
         capsule.classList.toggle("capsule_active")
     
         article.classList.toggle("expo_article_active")
 
-        image.children.item(1).classList.toggle("img_expo")
+        for (let index = 0; index < image.children.length; index++) {
+            image.children.item(index).classList.toggle("img_expo")
+        }
+
     
     },
     

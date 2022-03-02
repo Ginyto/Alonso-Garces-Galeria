@@ -3,6 +3,7 @@
 <html lang="es">
 
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +22,9 @@
     
 </head>
 
-<body onload="jarvis.standby(2)">
+
+
+<body onload="jarvis.standby(0)">
 
     <header class="header">
         <div class="headzone">
@@ -31,22 +34,24 @@
 
             </div>
 
-
-
         </div>
     </header>
+
+
 
     <div class="body_zone">
 
         <div class="menu">
 
             <div class="menu_left">
+
                 <div class="burger_zone">
 
                     <div class="hamburger" id="ham"> </div>
                     <div class="hamburger" id="burger"> </div>
 
                 </div>
+
 
                 <nav class="menu_deroulant">
 
@@ -58,21 +63,36 @@
                     <div class="roulant" onclick="jarvis.pathfinder(5)">Contactos</div>
 
                 </nav>
+
             </div>
 
-
-
-            <div class="name_zone">
-                <h1 class="page_name">Artistas</h1>
-            </div>
 
 
             <div class="menu_right">
+
                 <div class="settings">
+
                     <div class="mode_dark">
                         <img class="sol" src="Images/Icones/soleil_black.png" alt="nsol" onclick="jarvis.dark_mode()">
                     </div>
                 </div>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="carousel">
+
+
+            <div class="carousel_zone">
+
+
+                <div id="images">
+
+                </div>
+
             </div>
 
 
@@ -90,14 +110,64 @@
         
         </div>
 
-        
+
+
+
     </div>
 
+    
+    <footer class="pied">
+
+        <div class="minimalist"></div>
+
+        <div class="footer_zone">
+
+            <div class="localisation">
+
+                <div class="map"></div>
+
+            </div>
 
 
+            <div class="contact">
+
+                <div class="contactpro">
+                    <a href="mailto:info@alonsogarces.com" class="mailpro">info@garcesgaleria.com</a>
+                </div>
+
+                <div class="hyperlien">
+                    <a href="mailto:info@alonsogarces.com" class="mailpro">
+                        <img src="Images/Icones/email.png" alt="info@alonsogarces.com" class="logopro">
+                    </a>
+                    
+                    <a href="https://www.instagram.com/alonsogarcesgaleria/" target="_blank" class="logopro">
+                        <img src="Images/Icones/instagram.png" alt="instagram" class="logopro">
+                    </a>
+                    
+                    <a href="https://m.facebook.com/alonsogarcesgaleria" target="_blank" class="logopro">
+                        <img src="Images/Icones/fb.png" alt="facebook" class="logopro">
+                    </a>
+                    
+                    <a href="https://mobile.twitter.com/alonsogarcesart" target="_blank" class="logopro">
+                        <img src="Images/Icones/tweet.png" alt="twitter" class="logopro">
+                    </a>
+                
+                </div>
+
+
+            </div>
+
+
+            <div class="protection"> &copy; 2022 alonsogarces.com  All Rights Reserved </div>
+            
+        </div>
+
+
+    </footer>
 
 
 <script src="Scripts/main.js"></script>
+
 </body>
 
 

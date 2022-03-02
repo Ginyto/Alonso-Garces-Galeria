@@ -2,6 +2,7 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
+    nbr_capsule: 0,
 
 
     hello_there() {
@@ -37,10 +38,10 @@ const jarvis = {
             this.carousel(10)
         }
 
-        else if (no_page == 2) {
-            console.log("Artistas")
+
+        try {
             this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
-        }
+        } catch (error) {}
 
 
         
@@ -60,15 +61,25 @@ const jarvis = {
             .then(data => {
                 //zone de lancement des fonction dependente de JSON
                 const base = data
-                // console.log(base)
+
+                //console.log(base.expo)
+
+                //console.log(base.expo.amazonia.src.length)
                 
                 this.write("map", base.sys.footer.map)
+
+                try {
+                    this.write("titre_carousel", base.carousel.titre)
+                } catch (error) {}
+                
 
                 if (no_page == 0) {
                     
                 }
 
                 else if (no_page == 1) {
+
+                    this.create_capsule("expo_zone", "cap0", base.expo.amazonia.src.length)
 
                     this.write("date_titre", base.expo.amazonia.titre)
         
@@ -87,8 +98,110 @@ const jarvis = {
             })
     },
 
-    loadfooter() {
+
+
+
+    fill_capsule() {
         
+    },
+
+
+
+    /**
+     * Creation de capsule composer d'un titre une date des photos et de l'article qu'on vient injecter dans la zone parent
+     * @param {*} parent zone d'injection
+     * @param {*} id_capsule id de la capsule
+     * @param {*} nbr_photos nombre de photos a injecte
+     */
+    create_capsule(parent, id_capsule, nbr_photos) {
+
+        //squelette capsule
+
+        const zone = this.ciblage(parent)
+
+
+        const capsule = document.createElement('div')
+
+        capsule.id = id_capsule
+
+        this.nbr_capsule++
+        
+
+        capsule.className = "capsule"
+
+        capsule.onclick = function () { jarvis.reading_capsule(id_capsule) }
+
+        zone.appendChild(capsule)
+
+    
+        //insertion image
+
+        const img = document.createElement('div')
+
+        img.className = "expo_img"
+
+
+        for (let index = 0; index < nbr_photos; index++) {
+
+            const photo = document.createElement('img')
+
+            if (index === 0) {
+                photo.className = "img_expo"
+            }
+
+            else {
+                photo.className = "imgs"
+            }
+
+            photo.id = index
+
+            img.appendChild(photo)
+
+        }
+
+        capsule.appendChild(img)
+
+
+        //insertion titre
+
+        const zone_titre = document.createElement('div')
+
+        zone_titre.className = "expo_titre"
+
+        const date = document.createElement('h2')
+
+        date.className = "date_titre"
+
+        const titre = document.createElement('h2')
+
+        titre.className = "capsule_titre"
+
+        zone_titre.appendChild(date)
+
+        zone_titre.appendChild(titre)
+
+        capsule.appendChild(zone_titre)
+
+
+        //insertion article
+
+        const zone_article = document.createElement("div")
+
+        zone_article.className = "expo_article"
+
+        const article = document.createElement('p')
+
+        article.className = "article_expo"
+
+        zone_article.appendChild(article)
+
+        capsule.appendChild(zone_article)
+
+
+
+
+
+
     },
 
 
@@ -105,14 +218,14 @@ const jarvis = {
 
         // console.log("->",test)
 
-        // console.log("id ->", id)
+        //console.log("id ->", id)
 
         const classname = document.getElementsByClassName(target).item(0)
 
-        // console.log("classname ->", classname)
+        //console.log("classname ->", classname)
 
         if (id != null) {
-            console.log(id)
+            //console.log(id)
             return id
         }
 
@@ -128,6 +241,11 @@ const jarvis = {
     },
 
 
+    /**
+     * permet l'insertion d'une image selon la cible hmtl
+     * @param {*} target cible html
+     * @param {*} src path de la photo a inserer
+     */
     picture(target, src) {
         pic = this.ciblage(target)
         pic.src = src
@@ -145,11 +263,21 @@ const jarvis = {
 
         //console.log(cible)
 
-        cible.innerHTML += text
+        try {
+            cible.innerHTML += text
+        } catch (error) {
+            console("injection du texte à la cible html echoué", error)
+        }
 
         //console.log(cible)
     },
     
+
+    /**
+     * permet l'ecriture de plusieur ligne loading d'un JSON dans une cible hmtl
+     * @param {*} target cible html
+     * @param {*} tab tableau
+     */
     write_article(target,tab) {
         for (let index = 0; index < tab.length; index++) {
             const element = tab[index]
@@ -157,6 +285,12 @@ const jarvis = {
         }
     },
 
+
+
+    /**
+     *  Gere la lecture des capsule
+     * @param {*} id_cap numero de la capsule
+     */
 
     reading_capsule(id_cap) {
         console.log("reading_capsule")
@@ -178,7 +312,7 @@ const jarvis = {
 
         
 
-        capsule.classList.toggle("capsule")
+        // capsule.classList.toggle("capsule")
         capsule.classList.toggle("capsule_active")
     
         article.classList.toggle("expo_article_active")

@@ -86,7 +86,7 @@ const jarvis = {
 
                     this.create_capsule("expo_zone", "cap1", base.expo[base.expos[1]].src.length)
 
-                    this.fill_capsule("cap0", base, 1)
+                    this.fill_capsule("cap1", base, 1)
 
 
                 }
@@ -115,7 +115,7 @@ const jarvis = {
         for (let index = 0; index < capsule.children.item(0).children.length; index++) {
 
             const element = capsule.children.item(0).children.item(index);
-            this.picture(element, base.expo[base.expos[0]].src[index])
+            this.picture(element, base.expo[base.expos[no_expo]].src[index])
 
         }
 
@@ -167,7 +167,7 @@ const jarvis = {
                 photo.className = "img_expo"
             }
 
-            else {
+            else if (index > 0) {
                 photo.className = "imgs"
             }
 
@@ -330,14 +330,15 @@ const jarvis = {
 
         // console.log(article)
 
-        
-
         // capsule.classList.toggle("capsule")
         capsule.classList.toggle("capsule_active")
     
         article.classList.toggle("expo_article_active")
 
-        image.children.item(1).classList.toggle("img_expo")
+        for (let index = 0; index < image.children.length; index++) {
+            image.children.item(index).classList.toggle("img_expo")
+        }
+
     
     },
     

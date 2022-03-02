@@ -61,11 +61,17 @@ const jarvis = {
             .then(data => {
                 //zone de lancement des fonction dependente de JSON
                 const base = data
-                // console.log(base)
+
+                //console.log(base.expo)
 
                 //console.log(base.expo.amazonia.src.length)
                 
                 this.write("map", base.sys.footer.map)
+
+                try {
+                    this.write("titre_carousel", base.carousel.titre)
+                } catch (error) {}
+                
 
                 if (no_page == 0) {
                     
@@ -73,7 +79,7 @@ const jarvis = {
 
                 else if (no_page == 1) {
 
-                    this.create_capsule("expo_zone", "cap0", 2)
+                    this.create_capsule("expo_zone", "cap0", base.expo.amazonia.src.length)
 
                     this.write("date_titre", base.expo.amazonia.titre)
         
@@ -90,6 +96,13 @@ const jarvis = {
 
 
             })
+    },
+
+
+
+
+    fill_capsule() {
+        
     },
 
 
@@ -212,7 +225,7 @@ const jarvis = {
         //console.log("classname ->", classname)
 
         if (id != null) {
-            console.log(id)
+            //console.log(id)
             return id
         }
 

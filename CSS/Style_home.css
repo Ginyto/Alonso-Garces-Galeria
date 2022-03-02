@@ -60,6 +60,7 @@ body{
     width: 100%;
     /* background-color: yellow; */
     justify-content: space-between;
+    
 }
 
 .menu_deroulant{
@@ -209,20 +210,7 @@ body{
 }
 
 
-/*Page Name*/
-.name_zone{
-    width: 36%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    /* background-color: blanchedalmond; */
-}
-
-.page_name{
-    width: fit-content;
-    /*background-color: cadetblue;*/
-}
 
 
 /*Settings */
@@ -260,12 +248,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding-top: 3vh;
     padding-bottom: 3vh;
     width: 100%;
     /* background-color: crimson; */
     border-radius: 3%;
 }
+
+
 
 .carousel_zone{
     width: 101vh;
@@ -283,6 +274,14 @@ body{
     width: 100%;
     border-radius: 3%;
     max-width: 100%;
+}
+
+.titre_carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3vh;
 }
 
 

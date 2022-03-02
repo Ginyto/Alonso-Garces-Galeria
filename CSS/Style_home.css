@@ -336,24 +336,6 @@ body{
 }
 
 
-.capsule_active{
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-
-    width: 100%;
-
-
-    padding: 0.5vh;
-    border-radius: 3%;
-    margin: 1vh;
-
-}
-
-
 .capsule{
     display: flex;
 
@@ -374,6 +356,26 @@ body{
     background-color:lightgray;
 
 }
+
+
+.capsule_active{
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+
+    width: 100%;
+
+
+    padding: 0.5vh;
+    border-radius: 3%;
+    margin: 1vh;
+
+    background:transparent;
+}
+
 
 .expo_titre{
     display: flex;
@@ -486,7 +488,7 @@ body{
 
 
 
-
+/***FOOTER***/
 .pied{
     display: flex;
 

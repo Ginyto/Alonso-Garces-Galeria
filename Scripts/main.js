@@ -38,10 +38,10 @@ const jarvis = {
             this.carousel(10)
         }
 
-        else if (no_page == 2) {
-            console.log("Artistas")
+
+        try {
             this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
-        }
+        } catch (error) {}
 
 
         
@@ -299,7 +299,7 @@ const jarvis = {
 
         
 
-        capsule.classList.toggle("capsule")
+        // capsule.classList.toggle("capsule")
         capsule.classList.toggle("capsule_active")
     
         article.classList.toggle("expo_article_active")

@@ -29,6 +29,12 @@ const jarvis = {
 
             this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
             this.carousel(10)
+
+            this.loadjson(1)
+
+            this.loadjson(2)
+
+            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
 

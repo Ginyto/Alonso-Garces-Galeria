@@ -475,18 +475,18 @@ body{
 
 .separatiste{
     display: flex;
-    display: none;
-    justify-content: center;
+    justify-content: flex-start;
 
-    width: 100%;
+    width: 95%;
     padding: 1vh;
-    /* background-color:chartreuse; */
-    border: #D40004 0.5vh double;
+
+    margin: 2vh;
+    
+    border-bottom: #D40004 0.05vh solid;
 }
 
 .titre_separatif{
-    font-size: 4vh;
-    text-decoration: underline;
+    font-size: 2.5vh;
 }
 
 

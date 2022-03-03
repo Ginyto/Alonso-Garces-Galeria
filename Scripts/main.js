@@ -71,7 +71,9 @@ const jarvis = {
                 //console.log(base.expo.amazonia.src.length)
                 
                 
-                this.write(this.ciblage("map"), base.sys.footer.map)
+                if (this.ciblage("map").innerHTML.length === 0) {
+                    this.write(this.ciblage("map"), base.sys.footer.map)
+                }
 
                 
                 if (no_page === 0) {

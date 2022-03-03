@@ -23,7 +23,7 @@ const jarvis = {
 
         this.hamburger()
 
-        if (no_page == 0) {
+        if (no_page === 0) {
             //console.log("Bienvenido")
             this.loadjson(0)
 
@@ -31,20 +31,18 @@ const jarvis = {
             this.carousel(10)
         }
 
-        if (no_page == 1) {
-            this.loadjson(1)
 
-            this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            this.carousel(10)
+        else if (no_page === 1) {
+            this.loadjson(1)
         }
 
 
-        try {
+        else if (no_page === 2) {
+            this.loadjson(2)
+
             this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
-        } catch (error) {}
+        }
 
-
-        
         //console.log("link out")
 
     },
@@ -70,27 +68,12 @@ const jarvis = {
                 this.write(this.ciblage("map"), base.sys.footer.map)
 
                 
-                try {
+                if (no_page === 0) {
                     this.write(this.ciblage("titre_carousel"), base.carousel.titre)
-                } catch (error) {}
-                
-
-                if (no_page == 0) {
-                    
                 }
 
-                else if (no_page == 1) {
-
-                    this.create_capsule("expo_zone", "cap0", base.expo[base.expos[0]].src.length)
-
-                    this.fill_capsule("cap0", base, 0)
-
-
-                    this.create_capsule("expo_zone", "cap1", base.expo[base.expos[1]].src.length)
-
-                    this.fill_capsule("cap1", base, 1)
-
-
+                else if (no_page === 1) {
+                    this.loading_capsule(base)
                 }
 
             })
@@ -99,6 +82,31 @@ const jarvis = {
 
 
 
+    /**
+     *  charge toutes les capsules et les remplies avec les infos stocker dans le fichier json
+     * @param {*} base fichier json
+     */
+    loading_capsule(base) {
+        
+        for (let index = 0; index < base.expos.length; index++) {
+            const element = base.expos[index];
+            
+            this.create_capsule("expo_zone", `cap${index}`, base.expo[element].src.length)
+
+            this.fill_capsule(`cap${index}`, base, index)
+            
+        }
+
+    },
+
+
+
+    /**
+     * Rempli les capsules en fonction du json
+     * @param {*} target cible html
+     * @param {*} base fichier json
+     * @param {*} no_expo numero de l'exposition ranger dans le json
+     */
     fill_capsule(target, base, no_expo) {
 
         const capsule = this.ciblage(target)

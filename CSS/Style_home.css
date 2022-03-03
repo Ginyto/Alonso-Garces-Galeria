@@ -308,7 +308,7 @@ body{
     width: 300px;
     height: 200px;
     margin: 15px;
-    background-color:lightsalmon;
+    /* background-color:darkkhaki; */
 }
 
 
@@ -319,7 +319,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: burlywood; */
+
+    padding-top: 3vh;
+    /* background-color:blueviolet; */
 }
 
 .expo_zone{
@@ -327,6 +329,7 @@ body{
     justify-content: center;
     
     flex-wrap: wrap;
+
 
 
     width: 100%;
@@ -343,16 +346,19 @@ body{
     flex-wrap: wrap;
 
 
-    width: 50vh;
-    height: fit-content;
+    width: 80vh;
 
 
     border-radius: 3%;
     margin: 1vh;
+    
 
     padding: 0.5vh;
+    padding-top: 0;
 
-    background-color:lightgray;
+    /* background-color:blanchedalmond */
+
+    border: #D40004 solid 0.2vh;
 
 }
 
@@ -365,14 +371,15 @@ body{
     flex-wrap: wrap;
 
 
-    width: 100%;
+    width: 101vh;
 
 
     padding: 0.5vh;
-    border-radius: 3%;
+    border-radius: 1%;
     margin: 1vh;
+    margin-top: 0;
 
-    background:transparent;
+    /* background-color: #D40004; */
 }
 
 
@@ -401,27 +408,26 @@ body{
 .expo_img{
     display: flex;
 
-    width: 90vh;
+    width: 100%;
 
     justify-content: center;
 
     flex-wrap: wrap;
 
+    /* background-color: chocolate; */
+
 }
 
-.imgs{
+.none{
     display: none;
 }
 
-
-
-.img_expo{
+.peinture{
     width: 100%;
-    margin: 0.5vh;
-    border-radius: 3%;
-    display: flex;
-}
 
+    padding: 1vh;
+    border-radius: 3%;
+}
 
 
 
@@ -469,18 +475,18 @@ body{
 
 .separatiste{
     display: flex;
-    display: none;
-    justify-content: center;
+    justify-content: flex-start;
 
-    width: 100%;
+    width: 95%;
     padding: 1vh;
-    /* background-color:chartreuse; */
-    border: #D40004 0.5vh double;
+
+    margin: 2vh;
+    
+    border-bottom: #D40004 0.05vh solid;
 }
 
 .titre_separatif{
-    font-size: 4vh;
-    text-decoration: underline;
+    font-size: 2.5vh;
 }
 
 

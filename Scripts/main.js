@@ -66,10 +66,12 @@ const jarvis = {
 
                 //console.log(base.expo.amazonia.src.length)
                 
-                this.write("map", base.sys.footer.map)
+                
+                this.write(this.ciblage("map"), base.sys.footer.map)
 
+                
                 try {
-                    this.write("titre_carousel", base.carousel.titre)
+                    this.write(this.ciblage("titre_carousel"), base.carousel.titre)
                 } catch (error) {}
                 
 
@@ -163,17 +165,15 @@ const jarvis = {
 
             const photo = document.createElement('img')
 
-            if (index === 0) {
-                photo.className = "img_expo"
-            }
-
-            else if (index > 0) {
-                photo.className = "imgs"
-            }
-
             photo.id = index
 
+            photo.className = "peinture"
+
             img.appendChild(photo)
+
+            if (index > 0) {
+                photo.classList.toggle("none")
+            }
 
         }
 
@@ -335,8 +335,8 @@ const jarvis = {
     
         article.classList.toggle("expo_article_active")
 
-        for (let index = 0; index < image.children.length; index++) {
-            image.children.item(index).classList.toggle("img_expo")
+        for (let index = 1; index < image.children.length; index++) {
+            image.children.item(index).classList.toggle("none")
         }
 
     

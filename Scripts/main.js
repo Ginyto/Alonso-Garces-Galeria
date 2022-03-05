@@ -2,7 +2,7 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
-    nbr_capsule: 0,
+    cap: 0,
 
 
     hello_there() {
@@ -32,9 +32,9 @@ const jarvis = {
 
             this.loadjson(1)
 
+
             this.loadjson(2)
 
-            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
 
@@ -46,7 +46,6 @@ const jarvis = {
         else if (no_page === 2) {
             this.loadjson(2)
 
-            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
         //console.log("link out")
@@ -81,7 +80,11 @@ const jarvis = {
                 }
 
                 else if (no_page === 1) {
-                    this.loading_capsule(base)
+                    this.loading_capsule("expo_zone","expo_img", "peinture",base)
+                }
+
+                else if (no_page === 2) {
+                    this.loading_capsule("expo_zone","expo_img", "peinture",base)
                 }
 
             })
@@ -94,14 +97,14 @@ const jarvis = {
      *  charge toutes les capsules et les remplies avec les infos stocker dans le fichier json
      * @param {*} base fichier json
      */
-    loading_capsule(base) {
+    loading_capsule(zone,img,name,base) {
 
         const tab = Object.keys(base.expo)
         
         for (let index = 0; index < tab.length; index++) {
             const element = tab[index];
             
-            this.create_capsule("expo_zone", `cap${index}`, base.expo[element].src.length)
+            this.create_capsule(zone, `cap${index}`, img, name, base.expo[element].src.length)
 
             this.fill_capsule(`cap${index}`, base, index)
             
@@ -152,7 +155,7 @@ const jarvis = {
      * @param {*} id_capsule id de la capsule
      * @param {*} nbr_photos nombre de photos a injecte
      */
-    create_capsule(parent, id_capsule, nbr_photos) {
+    create_capsule(parent, id_capsule, zone_img, classimg, nbr_photos) {
 
         //squelette capsule
 
@@ -163,7 +166,7 @@ const jarvis = {
 
         capsule.id = id_capsule
 
-        this.nbr_capsule++
+        this.cap++
         
 
         capsule.className = "capsule"
@@ -177,7 +180,7 @@ const jarvis = {
 
         const img = document.createElement('div')
 
-        img.className = "expo_img"
+        img.className = zone_img
 
 
         for (let index = 0; index < nbr_photos; index++) {
@@ -186,7 +189,7 @@ const jarvis = {
 
             photo.id = index
 
-            photo.className = "peinture"
+            photo.className = classimg
 
             img.appendChild(photo)
 

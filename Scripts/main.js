@@ -95,9 +95,11 @@ const jarvis = {
      * @param {*} base fichier json
      */
     loading_capsule(base) {
+
+        const tab = Object.keys(base.expo)
         
-        for (let index = 0; index < base.expos.length; index++) {
-            const element = base.expos[index];
+        for (let index = 0; index < tab.length; index++) {
+            const element = tab[index];
             
             this.create_capsule("expo_zone", `cap${index}`, base.expo[element].src.length)
 
@@ -119,8 +121,9 @@ const jarvis = {
 
         const capsule = this.ciblage(target)
 
+        const tab = Object.keys(base.expo)
+
         console.log(capsule)
-        
 
         // console.log(base.expos)
         // console.log(base.expo)
@@ -128,16 +131,16 @@ const jarvis = {
 
         console.log(capsule.children.item(0).children.length)
 
-        this.write(capsule.children.item(1).children.item(0), base.expo[base.expos[no_expo]].titre)
+        this.write(capsule.children.item(1).children.item(0), base.expo[tab[no_expo]].titre)
 
         for (let index = 0; index < capsule.children.item(0).children.length; index++) {
 
             const element = capsule.children.item(0).children.item(index);
-            this.picture(element, base.expo[base.expos[no_expo]].src[index])
+            this.picture(element, base.expo[tab[no_expo]].src[index])
 
         }
 
-        this.write_article(capsule.children.item(2).children.item(0), base.expo[base.expos[no_expo]].article)
+        this.write_article(capsule.children.item(2).children.item(0), base.expo[tab[no_expo]].article)
 
     },
 

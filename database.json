@@ -13,12 +13,6 @@
     },
 
 
-    "expos" : [
-        "amazonia",
-        "sinfin"
-    ],
-
-
     "expo" : {
 
         "amazonia": {
@@ -102,5 +96,14 @@
                 "/Images/expo/sinfin/6.jpeg"
             ]
         }
+    },
+
+
+    "artista":{
+        "Luis Caballero" : {
+
+        }
     }
+
+
 }

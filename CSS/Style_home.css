@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all 0.5s ease-in-out;
 }
 
 @font-face {
@@ -26,9 +25,9 @@ body{
 
 
 .dark_mode{
-    transition: all 0.5s ease-in-out;
-    background-color: black;
     color: whitesmoke;
+    background-color: black;
+    
 }
 
 
@@ -337,6 +336,8 @@ body{
 
     border: #D40004 solid 0.2vh;
 
+    transition: all 0.5s ease-in-out;
+
 }
 
 
@@ -357,6 +358,8 @@ body{
     margin-top: 0;
 
     /* background-color: #D40004; */
+
+    transition: all 0.5s ease-in-out;
 }
 
 

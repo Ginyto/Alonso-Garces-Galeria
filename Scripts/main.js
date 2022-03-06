@@ -1,12 +1,10 @@
 const jarvis = {
 
     CAROUSEL_SIZE: 11,
-    ARTISTAS_SIZE: 11,
 
 
     hello_there() {
         console.log("Hello there")
-        console.log(this.data)
     },
 
 
@@ -20,7 +18,14 @@ const jarvis = {
 
         //console.log("link start")
 
+
         this.hamburger()
+
+        
+
+        if (localStorage.getItem('dark_mode') === 'on') {
+            this.dark_mode()
+        }
 
         if (no_page === 0) {
             //console.log("Bienvenido")
@@ -449,6 +454,22 @@ const jarvis = {
     },
 
 
+
+    /**
+     * Lance le mode sombre
+     */
+    dark_mode_on() {
+        this.dark_mode()
+
+        if (localStorage.getItem("dark_mode") === "on") {
+            localStorage.setItem("dark_mode", "off")
+        }
+        else {
+            localStorage.setItem("dark_mode", "on")
+        }
+    },
+
+
     /**
      * Ajout du dark mode
      */
@@ -481,9 +502,6 @@ const jarvis = {
             sol.src = "Images/Icones/soleil_black.png"
             console.log("el logo es blanco")
         }
-
-        
-        
     
     },
 

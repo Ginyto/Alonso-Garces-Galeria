@@ -291,7 +291,7 @@ body{
 
 
 /*Exposiciones*/
-.expo{
+.expo, .artiste{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -301,7 +301,7 @@ body{
     /* background-color:blueviolet; */
 }
 
-.expo_zone{
+.expo_zone, .artiste_zone{
     display: flex;
     justify-content: center;
     

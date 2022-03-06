@@ -2,7 +2,6 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
-    cap: 0,
 
 
     hello_there() {
@@ -81,12 +80,12 @@ const jarvis = {
 
                 else if (no_page === 1) {
 
-                    this.loading_capsule("expo_zone", base.expo, 0)
+                    this.loading_capsule("expo_zone", base.expo, 0, "cap")
                 }
 
                 else if (no_page === 2) {
 
-                    this.loading_capsule("expo_zone", base.artista, 1)
+                    this.loading_capsule("artiste_zone", base.artista, 1, "art")
                 }
 
             })
@@ -99,16 +98,22 @@ const jarvis = {
      *  charge toutes les capsules et les remplies avec les infos stocker dans le fichier json
      * @param {*} base fichier json
      */
-    loading_capsule(zone, base, no) {
+    loading_capsule(zone, base, no, type) {
 
         const tab = Object.keys(base)
         
         for (let index = 0; index < tab.length; index++) {
             const element = tab[index];
-            
-            this.create_capsule(zone, `cap${index}`, base[element].src.length)
 
-            this.fill_capsule(`cap${index}`, base, index, no)
+            const id = `${type}${index}`
+
+            console.log(id)
+            
+            this.create_capsule(zone, id, base[element].src.length)
+
+            this.fill_capsule(id, base, index, no)
+
+            
             
         }
 
@@ -217,8 +222,6 @@ const jarvis = {
 
         capsule.id = id_capsule
 
-        this.cap++
-        
 
         capsule.className = "capsule"
 

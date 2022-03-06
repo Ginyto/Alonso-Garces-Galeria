@@ -2,7 +2,6 @@ const jarvis = {
 
     CAROUSEL_SIZE: 11,
     ARTISTAS_SIZE: 11,
-    nbr_capsule: 0,
 
 
     hello_there() {
@@ -32,9 +31,9 @@ const jarvis = {
 
             this.loadjson(1)
 
+
             this.loadjson(2)
 
-            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
 
@@ -46,7 +45,6 @@ const jarvis = {
         else if (no_page === 2) {
             this.loadjson(2)
 
-            this.loading_photos("artist_box","artists","carousel", this.ARTISTAS_SIZE)
         }
 
         //console.log("link out")
@@ -81,7 +79,13 @@ const jarvis = {
                 }
 
                 else if (no_page === 1) {
-                    this.loading_capsule(base)
+
+                    this.loading_capsule("expo_zone", base.expo, 0, "cap")
+                }
+
+                else if (no_page === 2) {
+
+                    this.loading_capsule("artiste_zone", base.artista, 1, "art")
                 }
 
             })
@@ -94,14 +98,22 @@ const jarvis = {
      *  charge toutes les capsules et les remplies avec les infos stocker dans le fichier json
      * @param {*} base fichier json
      */
-    loading_capsule(base) {
-        
-        for (let index = 0; index < base.expos.length; index++) {
-            const element = base.expos[index];
-            
-            this.create_capsule("expo_zone", `cap${index}`, base.expo[element].src.length)
+    loading_capsule(zone, base, no, type) {
 
-            this.fill_capsule(`cap${index}`, base, index)
+        const tab = Object.keys(base)
+        
+        for (let index = 0; index < tab.length; index++) {
+            const element = tab[index];
+
+            const id = `${type}${index}`
+
+            console.log(id)
+            
+            this.create_capsule(zone, id, base[element].src.length)
+
+            this.fill_capsule(id, base, index, no)
+
+            
             
         }
 
@@ -115,29 +127,79 @@ const jarvis = {
      * @param {*} base fichier json
      * @param {*} no_expo numero de l'exposition ranger dans le json
      */
-    fill_capsule(target, base, no_expo) {
+    fill_capsule(target, base, no_expo, no) {
 
         const capsule = this.ciblage(target)
 
-        console.log(capsule)
-        
+        const tab = Object.keys(base)
 
-        // console.log(base.expos)
-        // console.log(base.expo)
-        // console.log(base.expo[base.expos[0]])
+        const objet = Object.values(base)
 
-        console.log(capsule.children.item(0).children.length)
+        //console.log(objet)
 
-        this.write(capsule.children.item(1).children.item(0), base.expo[base.expos[no_expo]].titre)
+        const sub_objet = Object.values(objet[no_expo])
+
+        // console.log(sub_objet[0])
+
+        // console.log(sub_objet[0])
+
+        // console.log(capsule)
+
+        // console.log(capsule.children.item(0).children.length)
+
+        this.write(capsule.children.item(1).children.item(0), tab[no_expo])
 
         for (let index = 0; index < capsule.children.item(0).children.length; index++) {
 
             const element = capsule.children.item(0).children.item(index);
-            this.picture(element, base.expo[base.expos[no_expo]].src[index])
+            this.picture(element, sub_objet[1][index])
 
         }
 
-        this.write_article(capsule.children.item(2).children.item(0), base.expo[base.expos[no_expo]].article)
+
+        if (no === 0) {
+            try {
+                this.write_article(capsule.children.item(2).children.item(0), sub_objet[0])
+            } catch (error) {
+                console.log("error cette capsule n'as pas d'article", error)
+            }
+        }
+
+        else if (no === 1) {
+            const info = Object.values(sub_objet[0])
+            console.log(info)
+
+            for (let index = 0; index < info.length - 1; index++) {
+                const element = info[index];
+
+                const titre = Object.keys(sub_objet[0])
+
+                console.log(titre[index])
+
+                const artitre = document.createElement('div')
+
+                artitre.className = "artitre"
+
+                artitre.innerHTML = titre[index] + "<br/>"
+
+                capsule.children.item(2).children.item(0).appendChild(artitre)
+                
+                const sub_info = Object.entries(element)
+
+                console.log(sub_info)
+
+                for (let index = 0; index < sub_info.length; index++) {
+                    const element = sub_info[index];
+
+                    this.write(capsule.children.item(2).children.item(0), element + "<br/>" + "<br/>")
+                    
+                    
+                }
+                this.write(capsule.children.item(2).children.item(0), "<br/>" + "<br/>" + "<br/>")
+            }
+
+        }
+
 
     },
 
@@ -160,8 +222,6 @@ const jarvis = {
 
         capsule.id = id_capsule
 
-        this.nbr_capsule++
-        
 
         capsule.className = "capsule"
 

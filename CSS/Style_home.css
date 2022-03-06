@@ -287,34 +287,11 @@ body{
 
 /*Artists*/
 
-.artist_zone{
-    display: flex;
-    
-    /*background-color: #D40004;*/
-    justify-content: center;
-}
-
-#artist_box{
-    display: flex;
-    /*background-color:aquamarine;*/
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-}
-
-
-.artists{
-    width: 300px;
-    height: 200px;
-    margin: 15px;
-    /* background-color:darkkhaki; */
-}
 
 
 
 /*Exposiciones*/
-.expo{
+.expo, .artiste{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -324,7 +301,7 @@ body{
     /* background-color:blueviolet; */
 }
 
-.expo_zone{
+.expo_zone, .artiste_zone{
     display: flex;
     justify-content: center;
     
@@ -445,13 +422,19 @@ body{
     border-radius: 3%;
     padding: 1vh;
 
+    width: 100%;
+
     /* background-color: blueviolet; */
 }
 
 
 
 
-
+.artitre{
+    border-bottom: #D40004 solid 0.15vh;
+    width: fit-content;
+    margin-bottom: 1vh;
+}
 
 
 

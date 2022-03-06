@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: all 0.5s ease-in-out;
 }
 
 @font-face {
@@ -26,9 +25,9 @@ body{
 
 
 .dark_mode{
-    font-weight: bold;
-    transition: all 0.5s ease-in-out;
+    color: whitesmoke;
     background-color: black;
+    
 }
 
 
@@ -337,6 +336,8 @@ body{
 
     border: #D40004 solid 0.2vh;
 
+    transition: all 0.5s ease-in-out;
+
 }
 
 
@@ -357,6 +358,8 @@ body{
     margin-top: 0;
 
     /* background-color: #D40004; */
+
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -429,11 +432,39 @@ body{
 
 
 
+/*Artiste*/
 
 .artitre{
     border-bottom: #D40004 solid 0.15vh;
     width: fit-content;
     margin-bottom: 1vh;
+}
+
+/*Info*/
+
+.info{
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    /* background-color:lightcoral */
+
+}
+
+.info_zone{
+    display: flex;
+    width: 80%;
+
+    padding: 1vh;
+
+    margin-top: 3vh;
+
+    border: #D40004 solid 0.4vh;
+    
+
+    /* background-color: #D40004; */
 }
 
 

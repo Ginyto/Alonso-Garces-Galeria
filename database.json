@@ -15,18 +15,7 @@
 
     "expo" : {
 
-        "amazonia": {
-
-            "date" : [
-                "Septiembre 13 / Octubre 8",
-                "2018"
-            ],
-
-            "titre" : "''Historia de Colombia y sus oligarquías'' Caricaturas de Antonio Caballero",
-
-            "artistas" : [
-                "Maria Tereza Negreiros"
-            ],
+        "''Historia de Colombia y sus oligarquías'' Caricaturas de Antonio Caballero": {
 
             "article" : [
                 "La presente exhibición se concentra en obras de la gran Serie Sobre el",
@@ -46,21 +35,22 @@
             "src": [
                 "/Images/expo/amazonia/1.jpeg",
                 "/Images/expo/amazonia/2.jpeg"
+            ],
+
+
+            "date" : [
+                "Septiembre 13 / Octubre 8",
+                "2018"
+            ],
+
+
+            "artistas" : [
+                "Maria Tereza Negreiros"
             ]
         },
 
 
-        "sinfin": {
-
-            "date" : "Octubre / Noviembre de 2018",
-
-            "titre" : [
-                "SINFÍN"
-            ],
-
-            "artistas" : [
-                "PEDRO TAGLIAFICO"
-            ],
+        "SINFÍN": {
 
             "article" : [
                 "No se trata de idolatrar ''chefs d'oeuvre'', ni de imitarlos, la verdadera razón, es encontrar en ellos su espíritu y hacerlo circular, dentro de una nueva génesis, tan sublime como la primera, liberarlos de su peso, para dar origen a una nueva'' Antonin Artaud",
@@ -94,25 +84,125 @@
                 "/Images/expo/sinfin/4.jpeg",
                 "/Images/expo/sinfin/5.jpeg",
                 "/Images/expo/sinfin/6.jpeg"
+            ],
+
+            "date" : "Octubre / Noviembre de 2018",
+
+            "artistas" : [
+                "PEDRO TAGLIAFICO"
             ]
         }
     },
 
 
     "artista":{
+
         "Luis Caballero" : {
-            "bio" : {
-                "1943": "Bogota",
-                "1961 - 1962" : "Universidad de los Andes, Bogota",
-                "1963 - 1964":	"Academie de la Grande Chaumiere, Paris",
-                "1967 - 1969":	"Profesor de dibujo en la Universidad  Jorge Tadeo Lozano, Bogota"
+
+            "info" : {
+
+                "Biografia" : {
+                    "1943":[
+                        " Bogota"
+                    ],
+                    "1961 - 1962":[
+                        " Universidad de los Andes, Bogota"
+                    ],
+                    "1963 - 1964":	[
+                        " Academie de la Grande Chaumiere, Paris"
+                    ],
+                    "1967 - 1969":	[
+                        " Profesor de dibujo en la Universidad  Jorge Tadeo Lozano, Bogota"
+                    ]
+                },
+
+                "Seleccion de Exposiciones Individuales" : {
+                    "2005":[
+                        " Galeria Mundo,Bogota, Colombia",
+                        " Remy Tolledo Gallery, New York"
+                    ],
+                    "2001":	[
+                        " Nohra Haime Gallery - New York"
+                    ],
+                    "1999":	[
+                        " 'Image of Latinoamerica',  Monique Goldstrom Gallery, New York",
+                        " 'The Use of the Hand,' Nohra Haime Gallery, New York"
+                    ],
+                    "1998": [
+                        " 'The Male Nude,' Nohra Haime Gallery, New York", 
+                        " 'Seleccion de Obra Grafica y de Ilustraciones, 'travelling exhibition: Museo Eduardo Sivori, Buenos Aires: Museo de la Fundacion Buque-Bus, Montevideo: Museo de Bellas Artes, Asuncion", 
+                        " Art Forum Gallery, Hanover, Germany",
+                        " Hartmann & Noe Gallery, Berlin, Germany"
+                    ],	
+                    "1997": [
+                        " Museo Nacional, 'Sin Titulo 1966-1968,'Bogota",
+                        " Arnot Art Museum,Elmira, NY 'Re-Presenting Representation'",
+                        " Arkansas Art Center, Little Rock, AK; Armand Hammer Museum, UCLA, Los Angeles, Museo de Bellas Artes, Caracas, Venezuela"
+                    ],
+                    "1995" : [
+                        " ''Obra sobre Papel'', Biblioteca Luis Angel Arango, Bogota"
+                    ]
+                },
+
+                "Seleccion de Exposiciones Colectivas" : {
+                    "2006":[
+                        " “Del taller al coleccionista”. Museo Nacional de Colombia, Bogotá."
+                    ],
+                    "1999":	[
+                        " 'Caballero Camacho Cardenas Ferrer Gamarra Lam Moreno,' Galerie Albert Loeb, New York"
+                    ],
+                    "1998":[
+                        " 'Arte colombiano contemporaneo: Tres Mestres,' Museu da Cidade, Lisbona, Portugal",
+                        " 'Contemporary Colombian Painting: Juan Antonio Roda/ Luis Caballero,' Art Museum of the Americas, O.A.S., Washington DC"
+                    ]
+                },
+
+                "Distinciones": {
+                    "1971":[
+                        " Premio de Pintura, Biennale de Peinture de Cagnes-sur-Mer, France"
+                    ],	
+                    "1977"	: [
+                        " Primer premio de dibujo en la Biennale de Rijeka, Yugoslavia"
+                    ]	
+                },
+
+                "Colecciones Publicas": [
+                    "Biblioteca Luis Ángel Arango, Bogotá.",
+
+                    "Archer M. Huntington Art Gallery, University of Texas, Austin.",
+
+                    "Museo de Arte Moderno de Bogotá",
+
+                    "Museo de Arte de la Universidad Nacional, Bogotá",
+
+                    "Museo Zea de Medellín",
+
+                    "Suramericana de Seguros, Medellín",
+
+                    "Museo de Arte Moderno La Tertulia, Cali",
+
+                    "Musée des Beaux Arts de Dunkerque, Francia ",
+
+                    "Museo de Bellas Artes de Caracas",
+
+                    "Fonds National d'Art Contemporain de Lorraine, Francia",
+
+                    "Fonds National d'Art Contemporain de Normandie, Francia",
+
+                    "Fonds Regional d'Art Contemporain d'Alsace, Selestat, Francia",
+
+                    "Bonnefanten Museum, Maastricht, Holanda",
+
+                    "Bibliothèque National, Paris, Francia",
+
+                    "Bibliothèque Municipale, Colmar, Francia"
+                ]
+            
             },
 
-
-
-
             "src" : [
-                "/Images/artistas/L.Caballero/1.jpeg"
+                "/Images/artistas/L.Caballero/1.jpeg",
+                "/Images/artistas/L.Caballero/2.jpeg"
             ]
         }
     }

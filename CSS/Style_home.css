@@ -430,7 +430,11 @@ body{
 
 
 
-
+.artitre{
+    border-bottom: #D40004 solid 0.15vh;
+    width: fit-content;
+    margin-bottom: 1vh;
+}
 
 
 

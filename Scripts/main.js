@@ -171,7 +171,13 @@ const jarvis = {
 
                 console.log(titre[index])
 
-                this.write(capsule.children.item(2).children.item(0), titre[index] + "<br/>")
+                const artitre = document.createElement('div')
+
+                artitre.className = "artitre"
+
+                artitre.innerHTML = titre[index] + "<br/>"
+
+                capsule.children.item(2).children.item(0).appendChild(artitre)
                 
                 const sub_info = Object.entries(element)
 

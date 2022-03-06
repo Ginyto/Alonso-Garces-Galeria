@@ -443,11 +443,7 @@ const jarvis = {
         }
 
         if (param == 4) {
-                document.location.pathname = "Pomodoro.html";
-        }
-
-        if (param == 5) {
-                document.location.pathname = "About.html";
+                document.location.pathname = "informacion.html";
         }
 
     },

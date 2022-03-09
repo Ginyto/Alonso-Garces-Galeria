@@ -9,7 +9,16 @@
     },
 
     "carousel": {
-        "titre": "Luis Caballero / Beatriz González"
+        "titre": "Luis Caballero / Beatriz González",
+
+        "artistas" : [
+            "Luis Caballero",
+            "Beatriz Gonzalez"
+        ],
+
+        "date" : "Octubre / Noviembre de 2018"
+
+
     },
 
 

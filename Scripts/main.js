@@ -131,6 +131,7 @@ const jarvis = {
      * @param {*} target cible html
      * @param {*} base fichier json
      * @param {*} no_expo numero de l'exposition ranger dans le json
+     * @param {*} no permet de differencier si c'est un artiste ou une expo
      */
     fill_capsule(target, base, no_expo, no) {
 
@@ -144,9 +145,15 @@ const jarvis = {
 
         const sub_objet = Object.values(objet[no_expo])
 
-        // console.log(sub_objet[0])
+        const article = sub_objet[0]
 
-        // console.log(sub_objet[0])
+        const sources = sub_objet[1]
+
+        const references = sub_objet[2]
+
+        console.log(sub_objet[1])
+
+        //console.log(sub_objet[0])
 
         // console.log(capsule)
 
@@ -157,27 +164,43 @@ const jarvis = {
         for (let index = 0; index < capsule.children.item(0).children.length; index++) {
 
             const element = capsule.children.item(0).children.item(index);
-            this.picture(element, sub_objet[1][index])
+            this.picture(element, sources[index])
 
         }
 
 
         if (no === 0) {
+
             try {
-                this.write_article(capsule.children.item(2).children.item(0), sub_objet[0])
+                this.write_article(capsule.children.item(2).children.item(0), article)
+
+                if (references.length > 0) {
+                    const ref = document.createElement('a')
+
+                    ref.className = "mailpro"
+
+                    ref.innerHTML = references[0]
+                    ref.href = references[1]
+                    ref.target = "_blank"
+
+                    capsule.children.item(2).children.item(0).appendChild(ref)
+                }
+            
             } catch (error) {
+
                 console.log("error cette capsule n'as pas d'article", error)
             }
+
         }
 
         else if (no === 1) {
-            const info = Object.values(sub_objet[0])
+            const info = Object.values(article)
             console.log(info)
 
             for (let index = 0; index < info.length - 1; index++) {
                 const element = info[index];
 
-                const titre = Object.keys(sub_objet[0])
+                const titre = Object.keys(article)
 
                 console.log(titre[index])
 
@@ -202,6 +225,8 @@ const jarvis = {
                 }
                 this.write(capsule.children.item(2).children.item(0), "<br/>" + "<br/>" + "<br/>")
             }
+
+
 
         }
 

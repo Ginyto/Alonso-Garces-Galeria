@@ -112,7 +112,7 @@ const jarvis = {
 
             const id = `${type}${index}`
 
-            console.log(id)
+            //console.log(id)
             
             this.create_capsule(zone, id, base[element].src.length)
 
@@ -151,7 +151,7 @@ const jarvis = {
 
         const references = sub_objet[2]
 
-        console.log(sub_objet[1])
+        //console.log(sub_objet[1])
 
         //console.log(sub_objet[0])
 
@@ -173,22 +173,47 @@ const jarvis = {
 
             try {
                 this.write_article(capsule.children.item(2).children.item(0), article)
-
-                if (references.length > 0) {
-                    const ref = document.createElement('a')
-
-                    ref.className = "mailpro"
-
-                    ref.innerHTML = references[0]
-                    ref.href = references[1]
-                    ref.target = "_blank"
-
-                    capsule.children.item(2).children.item(0).appendChild(ref)
-                }
             
             } catch (error) {
 
                 console.log("error cette capsule n'as pas d'article", error)
+            }
+
+            try {
+                if (references.length > 0) {
+
+
+                    for (let index = 0; index < references.length; index++) {
+
+                        const element = references[index];
+                        
+                            
+                        if (index % 2 === 0) {
+                            const ref = document.createElement('a')
+
+                            //console.log(element)
+                            ref.innerHTML = element
+
+                            ref.className = "mailpro"
+
+                            ref.target = "_blank"
+
+                            try {
+                                ref.href = references[index + 1]
+                                //console.log(references[index + 1])
+
+                            } catch (error) {}
+                            
+                            capsule.children.item(2).children.item(0).appendChild(ref)
+
+                        }
+                        
+                    }
+
+                }
+    
+            } catch (error) {
+                console.log("il n'y a pas de references -> "+error)
             }
 
         }

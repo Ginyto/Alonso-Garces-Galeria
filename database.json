@@ -9,7 +9,16 @@
     },
 
     "carousel": {
-        "titre": "Luis Caballero / Beatriz González"
+        "titre": "Luis Caballero / Beatriz González",
+
+        "artistas" : [
+            "Luis Caballero",
+            "Beatriz Gonzalez"
+        ],
+
+        "date" : "Octubre / Noviembre de 2018"
+
+
     },
 
 
@@ -51,6 +60,10 @@
                 "/Images/expo/sinfin/6.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
             "date" : "Octubre / Noviembre de 2018",
 
             "artistas" : [
@@ -77,8 +90,7 @@
 
                 "Lo anterior, sumado a la Comisión de la Verdad que se estableció en el marco del acuerdo de paz, abre una reflexión sobre la manera como se ha contado la historia local hasta este momento y la necesidad de contrastar las visiones y versiones que existen sobre cada acontecimiento.<br><br>",
 
-                "''En este momento hay, en muchos sitios, discusiones sobre cómo se debe contar la historia. Por ejemplo, en Chile se cumplen 45 años del golpe de Pinochet y se discute si se debe contar a los niños que los militares mataron gente. A mí me parece que todo hay que contarlo y discutirlo'', plantea Caballero, y añade que.<br><br>",
-                "El Tiempo 20 de septiembre 2018"
+                "''En este momento hay, en muchos sitios, discusiones sobre cómo se debe contar la historia. Por ejemplo, en Chile se cumplen 45 años del golpe de Pinochet y se discute si se debe contar a los niños que los militares mataron gente. A mí me parece que todo hay que contarlo y discutirlo'', plantea Caballero, y añade que.<br><br>"
             ],
 
             "src": [
@@ -86,7 +98,10 @@
             ],
 
             "references":[
-                "https://www.eltiempo.com/cultura/arte-y-teatro/exposicion-caricaturas-libro-antonio-caballero-270648"
+                "El Tiempo 20 de septiembre 2018<br><br>",
+                "https://www.eltiempo.com/cultura/arte-y-teatro/exposicion-caricaturas-libro-antonio-caballero-270648",
+                "Semana 15 de septiembre 2018<br><br>",
+                "https://www.semana.com/antonio-caballero-ilustra/582997/"
             ],
 
 
@@ -122,6 +137,10 @@
                 "/Images/expo/amazonia/2.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
 
             "date" : [
                 "Septiembre 13 / Octubre 8",
@@ -146,6 +165,10 @@
 
             "src": [
                 "/Images/expo/siega/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -173,6 +196,10 @@
                 "/Images/expo/siega/2.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
 
             "date" : [
                 "Agosto / Septiembre ",
@@ -195,6 +222,10 @@
 
             "src": [
                 "/Images/expo/pinklady/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -225,6 +256,10 @@
 
             "src": [
                 "/Images/expo/hematomas/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -271,6 +306,10 @@
                 "/Images/expo/naturaleza interior/5.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
 
             "date" : [
                 "Abril / Julio",
@@ -290,6 +329,10 @@
 
             "src": [
                 "/Images/expo/GVC/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -322,6 +365,10 @@
 
             "src": [
                 "/Images/expo/interceptos/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -362,6 +409,10 @@
                 "/Images/expo/rituales/1.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
 
             "date" : [
                 "Agosto / Septiembre ",
@@ -388,6 +439,10 @@
 
             "src": [
                 "/Images/expo/eyes/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 
@@ -422,6 +477,10 @@
                 "/Images/expo/umbrales/1.jpeg"
             ],
 
+            "references":[
+            
+            ],
+
 
             "date" : [
                 "Abril / Julio ",
@@ -446,6 +505,10 @@
 
             "src": [
                 "/Images/expo/sombra/1.jpeg"
+            ],
+
+            "references":[
+            
             ],
 
 

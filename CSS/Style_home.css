@@ -595,11 +595,6 @@ body{
     width: 5vh;
 }
 
-.logopro:hover{
-    width: 5vh;
-
-    transform: translateY(-1vh)
-}
 
 .hyperlien{
     display:flex;

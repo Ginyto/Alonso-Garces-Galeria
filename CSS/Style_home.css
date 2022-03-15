@@ -27,9 +27,44 @@ body{
 .dark_mode{
     color: whitesmoke;
     background-color: black;
-    
 }
 
+/**Loader**/
+
+.loader{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    background-color: black;
+
+    z-index: 999999999;
+}
+
+.loader img{
+    border-radius: 5%;
+
+    border: #D40004 solid 0.4vh;
+
+    margin-bottom: 6;
+}
+
+.loader h1{
+    margin-top: 2vh;
+}
+
+.fondu_out{
+    opacity: 0;
+    transition: opacity 0.5s ease-out
+}
 
 /*Logo*/
 

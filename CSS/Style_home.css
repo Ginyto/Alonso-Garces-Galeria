@@ -302,16 +302,16 @@ body{
 
 .expo_zone, .artiste_zone{
     display: flex;
-
     justify-content: center;
-
-    align-items:flex-start;
     
     flex-wrap: wrap;
 
 
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> parent of 244541c (fix capsule taille differente ( on doit ameliorer la page de garde ))
     width: 100%;
     
     /* background-color: aquamarine; */

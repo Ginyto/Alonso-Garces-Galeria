@@ -45,8 +45,6 @@ body{
     flex-direction: column;
 
     background-color: black;
-
-    z-index: 999999999;
 }
 
 .loader img{
@@ -63,7 +61,7 @@ body{
 
 .fondu_out{
     opacity: 0;
-    transition: opacity 0.5s ease-out
+    transition: opacity 0.5s ease-out;
 }
 
 /*Logo*/

@@ -1,9 +1,3 @@
-const loader = document.querySelector('.loader');
-
-window.addEventListener('load', () => {
-    loader.classList.add('fondu_out')
-})
-
 const jarvis = {
 
     CAROUSEL_SIZE: 11,
@@ -82,6 +76,9 @@ const jarvis = {
                 
                 if (this.ciblage("map").innerHTML.length === 0) {
                     this.write(this.ciblage("map"), base.sys.footer.map)
+                    this.write(this.ciblage("mailpro"), base.sys.mail)
+                    this.write_email(this.ciblage("mailpro"), base.sys.mail)
+                    this.write_email(document.getElementsByClassName('mailpro').item(1), base.sys.mail)
                 }
 
                 
@@ -226,14 +223,14 @@ const jarvis = {
 
         else if (no === 1) {
             const info = Object.values(article)
-            console.log(info)
+            //console.log(info)
 
             for (let index = 0; index < info.length - 1; index++) {
                 const element = info[index];
 
                 const titre = Object.keys(article)
 
-                console.log(titre[index])
+                //console.log(titre[index])
 
                 const artitre = document.createElement('div')
 
@@ -245,7 +242,7 @@ const jarvis = {
                 
                 const sub_info = Object.entries(element)
 
-                console.log(sub_info)
+                //console.log(sub_info)
 
                 for (let index = 0; index < sub_info.length; index++) {
                     const element = sub_info[index];
@@ -427,6 +424,19 @@ const jarvis = {
         //console.log(cible)
     },
 
+    write_email(cible, text) {
+
+        //console.log(cible)
+
+        try {
+            cible.href += 'mailto:'+text
+        } catch (error) {
+            console("injection du texte à la cible html echoué", error)
+        }
+
+        //console.log(cible)
+    },
+
 
 
     /**
@@ -544,19 +554,19 @@ const jarvis = {
         //console.log(logo)
 
         if (logo.alt == "El logo de la galeria blanco") {
-            console.log("el logo es blanco")
+            //console.log("el logo es blanco")
             logo.alt = "El logo de la galeria negro"
             logo.src = "Images/Logos/clear_white.png"
             sol.src = "Images/Icones/soleil_white.png"
-            console.log("el logo es negro")
+            //console.log("el logo es negro")
         }
 
         else{
-            console.log("el logo es negro")
+            //console.log("el logo es negro")
             logo.alt = "El logo de la galeria blanco"
             logo.src = "Images/Logos/clear_black.png"
             sol.src = "Images/Icones/soleil_black.png"
-            console.log("el logo es blanco")
+            //console.log("el logo es blanco")
         }
     
     },

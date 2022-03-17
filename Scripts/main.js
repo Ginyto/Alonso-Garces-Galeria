@@ -79,6 +79,7 @@ const jarvis = {
                     this.write(this.ciblage("mailpro"), base.sys.mail)
                     this.write_email(this.ciblage("mailpro"), base.sys.mail)
                     this.write_email(document.getElementsByClassName('mailpro').item(1), base.sys.mail)
+                    this.write(this.ciblage("protection"), base.sys.copyright)
                 }
 
                 

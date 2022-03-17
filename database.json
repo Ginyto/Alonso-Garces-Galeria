@@ -70,7 +70,10 @@
             
             ],
 
-            "date" : "Octubre / Noviembre de 2018",
+            "date" : [
+                "Octubre / Noviembre",
+                " 2018"
+            ],
 
             "artistas" : [
                 "PEDRO TAGLIAFICO"
@@ -113,7 +116,7 @@
 
             "date" : [
                 "Septiembre 13 / Octubre 8",
-                "2018"
+                " 2018"
             ],
 
 
@@ -150,7 +153,7 @@
 
             "date" : [
                 "Septiembre 13 / Octubre 8",
-                "2018"
+                " 2018"
             ],
 
 
@@ -180,7 +183,7 @@
 
             "date" : [
                 "Agosto / Septiembre ",
-                "2018"
+                " 2018"
             ],
 
 
@@ -209,7 +212,7 @@
 
             "date" : [
                 "Agosto / Septiembre ",
-                "2018"
+                " 2018"
             ],
 
 
@@ -237,7 +240,7 @@
 
             "date" : [
                 "Junio / Julio",
-                "2018"
+                " 2018"
             ],
 
 
@@ -271,7 +274,7 @@
 
             "date" : [
                 "Junio / Julio",
-                "2018"
+                " 2018"
             ],
 
 
@@ -319,7 +322,7 @@
 
             "date" : [
                 "Abril / Julio",
-                "2018"
+                " 2018"
             ],
 
 
@@ -344,7 +347,7 @@
 
             "date" : [
                 "Febrero / Marzo",
-                "2018"
+                " 2018"
             ],
 
 
@@ -380,7 +383,7 @@
 
             "date" : [
                 "Octubre /Diciembre ",
-                "2017"
+                " 2017"
             ],
 
 
@@ -422,7 +425,7 @@
 
             "date" : [
                 "Agosto / Septiembre ",
-                "2017"
+                " 2017"
             ],
 
 
@@ -454,7 +457,7 @@
 
             "date" : [
                 "Julio / Agosto ",
-                "2017"
+                " 2017"
             ],
 
 
@@ -490,7 +493,7 @@
 
             "date" : [
                 "Abril / Julio ",
-                "2017"
+                " 2017"
             ],
 
 
@@ -520,7 +523,7 @@
 
             "date" : [
                 "Febrero / Abril",
-                "2017"
+                " 2017"
             ],
 
 

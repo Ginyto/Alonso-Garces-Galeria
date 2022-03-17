@@ -141,7 +141,7 @@ const jarvis = {
 
         const capsule = this.ciblage(target)
 
-        const tab = Object.keys(base)
+        const key = Object.keys(base)
 
         const objet = Object.values(base)
 
@@ -155,15 +155,21 @@ const jarvis = {
 
         const references = sub_objet[2]
 
+        const dates = sub_objet[3]
+
+        const ciblage_titre = capsule.children.item(1).children.item(0)
+
+        const ciblage_article = capsule.children.item(2).children.item(0)
+
         //console.log(sub_objet[1])
 
         //console.log(sub_objet[0])
 
-        // console.log(capsule)
+        // console.log(jkey[no_expo])
 
         // console.log(capsule.children.item(0).children.length)
 
-        this.write(capsule.children.item(1).children.item(0), tab[no_expo])
+        this.write(ciblage_titre, key[no_expo])
 
         for (let index = 0; index < capsule.children.item(0).children.length; index++) {
 
@@ -173,10 +179,11 @@ const jarvis = {
         }
 
 
+
         if (no === 0) {
 
             try {
-                this.write_article(capsule.children.item(2).children.item(0), article)
+                this.write_article(ciblage_article, article)
             
             } catch (error) {
 
@@ -219,6 +226,8 @@ const jarvis = {
             } catch (error) {
                 console.log("il n'y a pas de references -> "+error)
             }
+
+            this.write(ciblage_article, "<br/><br/>" + dates)
 
         }
 

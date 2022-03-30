@@ -17,6 +17,30 @@
 
     "expo" : {
 
+        "Huellas": {
+
+            "article" :[
+
+            ],
+
+            "src": [
+                    "/Images/expo/huellas/1.png"
+
+                ],
+
+            "references":[
+                
+            ],
+
+            "artistas" : [
+                "Luis Caballero",
+                "Beatriz Gonzalez"
+            ],
+
+            "date" : "Octubre / Noviembre de 2018"
+
+        },
+
         "Luis Caballero / Beatriz González": {
 
             "article" :[],

@@ -34,7 +34,7 @@ const jarvis = {
             // this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
             // this.carousel(10)
 
-            this.setup_carousel("images","img_carousel","carousel", this.CAROUSEL_SIZE, 10)
+            
 
             this.loadjson(1)
 
@@ -89,6 +89,7 @@ const jarvis = {
                 
                 if (no_page === 0) {
                     this.write(this.ciblage("titre_carousel"), base.carousel.titre)
+                    this.setup_carousel("images","img_carousel",base.carousel.src, base.carousel.src.length, 10)
                 }
 
                 else if (no_page === 1) {
@@ -698,7 +699,7 @@ const jarvis = {
 
         photo.id = `photo${no}`
 
-        photo.src = `Images/${folder}/${no}.jpg`
+        photo.src = folder
 
         photo.alt = `photo ${no}`
 
@@ -713,7 +714,9 @@ const jarvis = {
     loading_photos(parent,id,src, size){
 
         for (let index = 1; index <= size; index++) {
-            this.create_photo(parent,id,src,index)
+
+            const element = src[index-1]
+            this.create_photo(parent,id,element,index)
         }
     }
 }

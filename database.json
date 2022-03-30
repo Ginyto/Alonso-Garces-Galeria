@@ -17,6 +17,25 @@
     "carousel": {
         "titre": "Luis Caballero / Beatriz González",
 
+        "src": [
+                "/Images/carousel/1.jpg",
+                "/Images/carousel/2.jpg",
+                "/Images/carousel/3.jpg",
+                "/Images/carousel/4.jpg",
+                "/Images/carousel/5.jpg",
+                "/Images/carousel/6.jpg",
+                "/Images/carousel/7.jpg",
+                "/Images/carousel/8.jpg",
+                "/Images/carousel/9.jpg",
+                "/Images/carousel/10.jpg",
+                "/Images/carousel/11.jpg"
+
+            ],
+
+            "references":[
+            
+            ],
+
         "artistas" : [
             "Luis Caballero",
             "Beatriz Gonzalez"

@@ -7,7 +7,7 @@ const jarvis = {
         console.log("Hello there")
     },
 
-
+    
 
 
     /**
@@ -31,13 +31,12 @@ const jarvis = {
             //console.log("Bienvenido")
             this.loadjson(0)
 
-            this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            this.carousel(10)
+            // this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
+            // this.carousel(10)
+
+            this.setup_carousel("images","img_carousel","carousel", this.CAROUSEL_SIZE, 10)
 
             this.loadjson(1)
-
-
-            this.loadjson(2)
 
         }
 
@@ -57,6 +56,11 @@ const jarvis = {
     },
 
 
+    setup_carousel(parent, id, source, size, seconde) {
+        this.loading_photos(parent, id, source, size)
+        this.carousel(seconde)
+        
+    },
 
 
     /**

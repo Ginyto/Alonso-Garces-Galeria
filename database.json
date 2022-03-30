@@ -19,18 +19,20 @@
 
         "Luis Caballero / Beatriz González": {
 
+            "article" :[],
+
             "src": [
-                    "/Images/carousel/1.jpg",
-                    "/Images/carousel/2.jpg",
-                    "/Images/carousel/3.jpg",
-                    "/Images/carousel/4.jpg",
-                    "/Images/carousel/5.jpg",
-                    "/Images/carousel/6.jpg",
-                    "/Images/carousel/7.jpg",
-                    "/Images/carousel/8.jpg",
-                    "/Images/carousel/9.jpg",
-                    "/Images/carousel/10.jpg",
-                    "/Images/carousel/11.jpg"
+                    "/Images/expo/LCBG/1.jpg",
+                    "/Images/expo/LCBG/2.jpg",
+                    "/Images/expo/LCBG/3.jpg",
+                    "/Images/expo/LCBG/4.jpg",
+                    "/Images/expo/LCBG/5.jpg",
+                    "/Images/expo/LCBG/6.jpg",
+                    "/Images/expo/LCBG/7.jpg",
+                    "/Images/expo/LCBG/8.jpg",
+                    "/Images/expo/LCBG/9.jpg",
+                    "/Images/expo/LCBG/10.jpg",
+                    "/Images/expo/LCBG/11.jpg"
 
                 ],
 

@@ -78,13 +78,14 @@ const jarvis = {
 
                 const exposiciones = Object.values(objet[1])
 
-                console.log(titre)
+                //console.log(titre)
 
 
                 //console.log(base.expo.amazonia.src.length)
                 
                 
                 if (this.ciblage("map").innerHTML.length === 0) {
+
                     this.write(this.ciblage("map"), base.sys.footer.map)
                     this.write(this.ciblage("mailpro"), base.sys.mail)
                     this.write_email(this.ciblage("mailpro"), base.sys.mail)
@@ -94,6 +95,7 @@ const jarvis = {
 
                 
                 if (no_page === 0) {
+                    
                     this.write(this.ciblage("titre_carousel"), titre[0])
                     this.setup_carousel("images","img_carousel",exposiciones[0].src, exposiciones[0].src.length, 10)
                 }
@@ -722,7 +724,9 @@ const jarvis = {
         for (let index = 1; index <= size; index++) {
 
             const element = src[index-1]
-            this.create_photo(parent,id,element,index)
+            this.create_photo(parent, id, element, index)
+            
+            //console.log(element)
         }
     }
 }

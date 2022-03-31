@@ -31,10 +31,6 @@ const jarvis = {
             // this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
             // this.carousel(10)
 
-            
-
-            this.loadjson(1)
-
         }
 
 
@@ -97,17 +93,23 @@ const jarvis = {
                 if (no_page === 0) {
                     
                     this.write(this.ciblage("titre_carousel"), titre[0])
-                    this.setup_carousel("images","img_carousel",exposiciones[0].src, exposiciones[0].src.length, 10)
+
+                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 10)
+
+                    this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 2)
+                    
+                    
                 }
 
                 else if (no_page === 1) {
 
-                    this.loading_capsule("expo_zone", base.expo, 0, "cap")
+                    this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 0)
+
                 }
 
                 else if (no_page === 2) {
 
-                    this.loading_capsule("artiste_zone", base.artista, 1, "art")
+                    this.loading_capsule("artiste_zone", base.artista, 1, "art", 0,0)
                 }
 
             })
@@ -120,11 +122,15 @@ const jarvis = {
      *  charge toutes les capsules et les remplies avec les infos stocker dans le fichier json
      * @param {*} base fichier json
      */
-    loading_capsule(zone, base, no, type) {
+    loading_capsule(zone, base, no, type,min, max) {
 
         const tab = Object.keys(base)
+
+        if (max === 0) {
+            max = tab.length
+        }
         
-        for (let index = 0; index < tab.length; index++) {
+        for (let index = min; index < max; index++) {
             const element = tab[index];
 
             const id = `${type}${index}`

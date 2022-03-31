@@ -14,21 +14,77 @@
         "copyright": "© 2022 alonsogarcesgaleria.com All Rights Reserved"
     },
 
-    "carousel": {
-        "titre": "Luis Caballero / Beatriz González",
-
-        "artistas" : [
-            "Luis Caballero",
-            "Beatriz Gonzalez"
-        ],
-
-        "date" : "Octubre / Noviembre de 2018"
-
-
-    },
-
 
     "expo" : {
+
+        "Huellas": {
+
+            "article" :[
+                
+                "Las obras expuestas comprenden las últimas cinco décadas (1970/2020) de la activa y prolífica producción de Pedro Tagliafico, quien nos ha mostrado a través de su extensa trayectoria un trabajo consecuente y racional, la línea “vehículo” y punto de partida de la gran mayoría de sus obras, va formando a través de un ejercicio gestual y ordenado retículas sucesivas que se construyen, se hacen visibles, transparentes, desaparecen y se vuelven a construir.<br><br>",
+
+                "Dicha secuencia de cuadriculas que emergen, ya sea por un trazo, un corte, un entrecruzamiento o por el posicionamiento de la materia misma, se convierten en el entorno sin límites de un sinfín, una obsesiva y recurrente búsqueda del infinito, donde solo existe « el comenzar »<br><br>",
+
+                "Tagliafico, utiliza en su obra, diferentes tipos de materiales, tela, plástico, madera, no como “soporte” como suele percibirse en la pintura convencional sino inherentes y propios a la obra, como un alquimista, tiene un profundo conocimiento de esos elementos que le permite, en el proceso de creación, “controlar” hasta las discretas modificaciones de color, que como testigo del transcurrir del tiempo van apareciendo lentamente como sutiles cambios cromáticos.<br><br>",
+
+                "A principio de la década de los 60s Pedro Tagliafico se radica en Londres, comenzando así su larga permanencia en Europa, opuestamente a otros artistas Latinoamericanos de su generación que encaminaron su producción a los “dogmas” trazados por el arte cinético, Tagliafico, remite su búsqueda e interés a otras corriente, y será en Italia,  país donde vivió a partir de 1970, que cambiará indiscutiblemente el curso de su obra.<br><br>",
+
+                "En ese momento, Italia estaba lejos de ser para los « ojos » de la crítica Universal, « el »epicentro artístico de interés, artistas y creadores « respiraban » una atmósfera libre de « directrices », donde confluían activamente diferentes “movimientos” que no evidenciaban entre sí, fronteras de estilos, anotemos que esa esencia de “libertad total” era liderado por el arte Povera, que reunía a pesar de su heterogeneidad los “pensamientos” vanguardistas que marcaran, indudablemente las generaciones futuras, creadores como, Anselmo, Kounellis, Mario y Marisa Merz, Paolini, Pascali, Penone, Manzoni, Pistoletto y tantos otros, gozaban de una producción en plena ebullición.<br><br>",
+
+                "No obstante, de estas referencias resulta difícil encasillar a Tagliafico dentro de un estilo particular. Esas influencias son palpables en su trabajo y en él, existe una plena voluntad y conciencia de mostrarlas, que sean visibles, y de allí, surgen en su obra, improntas personales y únicas que pueden ir de las puramente minimalistas a la abstracción geométrica, del conceptualismo al constructivismo, resultando un trabajo de un esteticismo muy marcado que sin formalismo, transmite y ante todo sugiere sentimientos viscerales, afines a un arte que no es extraño a su tiempo.<br><br>",
+
+                "Reinaldo Annicchiarico 2022"
+            ],
+
+            "src": [
+                    "/Images/expo/huellas/1.png"
+
+                ],
+
+            "references":[
+                
+            ],
+
+            "artistas" : [
+                "Pedro Tagliafico"
+            ],
+
+            "date" : "Octubre / Noviembre de 2018"
+
+        },
+
+        "Luis Caballero / Beatriz González": {
+
+            "article" :[],
+
+            "src": [
+                    "/Images/expo/LCBG/1.jpg",
+                    "/Images/expo/LCBG/2.jpg",
+                    "/Images/expo/LCBG/3.jpg",
+                    "/Images/expo/LCBG/4.jpg",
+                    "/Images/expo/LCBG/5.jpg",
+                    "/Images/expo/LCBG/6.jpg",
+                    "/Images/expo/LCBG/7.jpg",
+                    "/Images/expo/LCBG/8.jpg",
+                    "/Images/expo/LCBG/9.jpg",
+                    "/Images/expo/LCBG/10.jpg",
+                    "/Images/expo/LCBG/11.jpg"
+
+                ],
+
+            "references":[
+                
+            ],
+
+            "artistas" : [
+                "Luis Caballero",
+                "Beatriz Gonzalez"
+            ],
+
+            "date" : "Octubre / Noviembre de 2018"
+
+        },
+
 
         "''sinfín''": {
 

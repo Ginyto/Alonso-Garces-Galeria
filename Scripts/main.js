@@ -1,13 +1,10 @@
 const jarvis = {
 
-    CAROUSEL_SIZE: 11,
-
-
     hello_there() {
         console.log("Hello there")
     },
 
-
+    
 
 
     /**
@@ -31,13 +28,12 @@ const jarvis = {
             //console.log("Bienvenido")
             this.loadjson(0)
 
-            this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            this.carousel(10)
+            // this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
+            // this.carousel(10)
+
+            
 
             this.loadjson(1)
-
-
-            this.loadjson(2)
 
         }
 
@@ -57,6 +53,11 @@ const jarvis = {
     },
 
 
+    setup_carousel(parent, id, source, size, seconde) {
+        this.loading_photos(parent, id, source, size)
+        this.carousel(seconde)
+        
+    },
 
 
     /**
@@ -69,12 +70,22 @@ const jarvis = {
                 //zone de lancement des fonction dependente de JSON
                 const base = data
 
-                //console.log(base.expo)
+                const key = Object.keys(base)
+
+                const objet = Object.values(base)
+
+                const titre = Object.keys(objet[1])
+
+                const exposiciones = Object.values(objet[1])
+
+                //console.log(titre)
+
 
                 //console.log(base.expo.amazonia.src.length)
                 
                 
                 if (this.ciblage("map").innerHTML.length === 0) {
+
                     this.write(this.ciblage("map"), base.sys.footer.map)
                     this.write(this.ciblage("mailpro"), base.sys.mail)
                     this.write_email(this.ciblage("mailpro"), base.sys.mail)
@@ -84,7 +95,9 @@ const jarvis = {
 
                 
                 if (no_page === 0) {
-                    this.write(this.ciblage("titre_carousel"), base.carousel.titre)
+                    
+                    this.write(this.ciblage("titre_carousel"), titre[0])
+                    this.setup_carousel("images","img_carousel",exposiciones[0].src, exposiciones[0].src.length, 10)
                 }
 
                 else if (no_page === 1) {
@@ -694,7 +707,7 @@ const jarvis = {
 
         photo.id = `photo${no}`
 
-        photo.src = `Images/${folder}/${no}.jpg`
+        photo.src = folder
 
         photo.alt = `photo ${no}`
 
@@ -709,7 +722,11 @@ const jarvis = {
     loading_photos(parent,id,src, size){
 
         for (let index = 1; index <= size; index++) {
-            this.create_photo(parent,id,src,index)
+
+            const element = src[index-1]
+            this.create_photo(parent, id, element, index)
+            
+            //console.log(element)
         }
     }
 }

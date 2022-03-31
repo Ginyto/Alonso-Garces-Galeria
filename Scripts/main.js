@@ -50,8 +50,11 @@ const jarvis = {
 
 
     setup_carousel(parent, id, source, size, seconde) {
+
         this.loading_photos(parent, id, source, size)
         this.carousel(seconde)
+
+        console.log("setup carousel")
         
     },
 

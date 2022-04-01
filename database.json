@@ -3,7 +3,7 @@
 
         "footer":{
 
-            "map" : "Horarios de la galería: Abierta al público de lunes a viernes de 10 a.m a 2:00 p.m. Entrada libre"
+            "map" : "Horarios de la galería: Abierta al público de lunes a viernes de 10 a.m a 2:00 p.m. Entrada libre <br> Cra 5 26b-92 <br> tel : 57 1 3375832 / 57 1 3375827 <br> Bogotá (Colombia)"
 
         },
 
@@ -37,7 +37,14 @@
             ],
 
             "src": [
-                    "/Images/expo/huellas/1.jpeg"
+                    "/Images/expo/huellas/1.jpeg",
+                    "/Images/expo/huellas/2.jpeg",
+                    "/Images/expo/huellas/3.jpeg",
+                    "/Images/expo/huellas/4.jpeg",
+                    "/Images/expo/huellas/5.jpeg",
+                    "/Images/expo/huellas/6.jpeg",
+                    "/Images/expo/huellas/7.jpeg",
+                    "/Images/expo/huellas/8.jpeg"
 
                 ],
 

@@ -663,7 +663,7 @@ const jarvis = {
      * Gere le carousel à interval de seconde défini
      */
     carousel(sec, size) {
-        console.log("Début du carousel")
+        //console.log("Début du carousel")
         selcoura = 1
         setInterval(this.setcarousel(size),sec*1000)
     },

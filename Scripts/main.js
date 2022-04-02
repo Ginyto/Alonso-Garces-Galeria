@@ -641,7 +641,7 @@ const jarvis = {
         
         photo.style.transform = `translateX(-${photo_width * tour}px)`
         
-        // console.log(tour)
+        console.log(tour)
 
         
 

@@ -94,7 +94,7 @@ const jarvis = {
                     
                     this.write(this.ciblage("titre_carousel"), titre[0])
 
-                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 11)
+                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 5)
 
                     this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 2)
                 }

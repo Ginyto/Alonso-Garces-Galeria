@@ -28,9 +28,6 @@ const jarvis = {
             //console.log("Bienvenido")
             this.loadjson(0)
 
-            // this.loading_photos("images","img_carousel","carousel", this.CAROUSEL_SIZE)
-            // this.carousel(10)
-
         }
 
 
@@ -52,9 +49,9 @@ const jarvis = {
     setup_carousel(parent, id, source, size, seconde) {
 
         this.loading_photos(parent, id, source, size)
-        this.carousel(seconde)
+        this.carousel(seconde, size)
 
-        console.log("setup carousel")
+        //console.log("setup carousel")
         
     },
 
@@ -97,11 +94,9 @@ const jarvis = {
                     
                     this.write(this.ciblage("titre_carousel"), titre[0])
 
-                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 10)
+                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 11)
 
                     this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 2)
-                    
-                    
                 }
 
                 else if (no_page === 1) {
@@ -638,13 +633,15 @@ const jarvis = {
 
         const photo = document.getElementById(`photo${no}`)
 
-        //console.log(photo)
+        // console.log(photo)
 
         photo_width = photo.getBoundingClientRect().width
 
         photo.style = "transition: all 10s ease;"
         
-        photo.style.transform = `translateX(-${photo_width*tour}px)`
+        photo.style.transform = `translateX(-${photo_width * tour}px)`
+        
+        // console.log(tour)
 
         
 
@@ -654,11 +651,13 @@ const jarvis = {
     /**
      * Fais slider tout le carousel
      */
-    superslides() {
+    superslides(size) {
 
-        for (let index = 1; index <= jarvis.CAROUSEL_SIZE; index++) {
+        for (let index = 1; index <= size; index++) {
             this.slide(index,selcoura)
         }
+
+        //console.log("seloura",selcoura)
 
     },
     
@@ -667,10 +666,10 @@ const jarvis = {
     /**
      * Gere le carousel à interval de seconde défini
      */
-    carousel(sec) {
+    carousel(sec, size) {
         //console.log("Début du carousel")
         selcoura = 1
-        setInterval(this.setcarousel,sec*1000)
+        setInterval(this.setcarousel, sec*1000, size)
     },
 
 
@@ -678,14 +677,17 @@ const jarvis = {
     /**
      * Gere le timer du carousel
      */
-    setcarousel() {
+    setcarousel(size) {
 
-        //console.log(selcoura)
+        // console.log("setcarousel selcoura",selcoura)
 
-        jarvis.superslides()
+        jarvis.superslides(size)
 
-        if (selcoura < jarvis.CAROUSEL_SIZE - 1){
+        // console.log("size",size)
+
+        if (selcoura < size - 1){
             selcoura++
+            // console.log("increment")
         }
         else {
             selcoura = 0

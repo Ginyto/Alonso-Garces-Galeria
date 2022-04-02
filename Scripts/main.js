@@ -94,7 +94,7 @@ const jarvis = {
                     
                     this.write(this.ciblage("titre_carousel"), titre[0])
 
-                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 10)
+                    this.setup_carousel("images", "img_carousel", exposiciones[0].src, exposiciones[0].src.length, 11)
 
                     this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 2)
                 }
@@ -633,13 +633,15 @@ const jarvis = {
 
         const photo = document.getElementById(`photo${no}`)
 
-        //console.log(photo)
+        // console.log(photo)
 
         photo_width = photo.getBoundingClientRect().width
 
         photo.style = "transition: all 10s ease;"
         
-        photo.style.transform = `translateX(-${photo_width*tour}px)`
+        photo.style.transform = `translateX(-${photo_width * tour}px)`
+        
+        // console.log(tour)
 
         
 
@@ -655,6 +657,8 @@ const jarvis = {
             this.slide(index,selcoura)
         }
 
+        //console.log("seloura",selcoura)
+
     },
     
 
@@ -665,7 +669,7 @@ const jarvis = {
     carousel(sec, size) {
         //console.log("Début du carousel")
         selcoura = 1
-        setInterval(this.setcarousel(size),sec*1000)
+        setInterval(this.setcarousel, sec*1000, size)
     },
 
 
@@ -675,12 +679,15 @@ const jarvis = {
      */
     setcarousel(size) {
 
-        //console.log(selcoura)
+        // console.log("setcarousel selcoura",selcoura)
 
         jarvis.superslides(size)
 
+        // console.log("size",size)
+
         if (selcoura < size - 1){
             selcoura++
+            // console.log("increment")
         }
         else {
             selcoura = 0

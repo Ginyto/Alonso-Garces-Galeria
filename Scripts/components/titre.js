@@ -31,8 +31,9 @@ vue_titre.component('compo-titre',{
     },
 
     computed: {
-        titre() {
+        titre(no_page) {
             return this.titres[0]
+            var x = false
         }
     },
 

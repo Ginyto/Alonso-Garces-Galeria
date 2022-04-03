@@ -12,11 +12,15 @@ const vue_titre = Vue.createApp({
     },
 })
 
-vue_titre.component('compo-titre',{
+vue_titre.component('compo-titre', {
+
+    props: {
+        no_page: Number
+    },
     
     template:
     /*html*/
-    `<div id="vue_titre" class="vue_titre_zone">
+    `<div id="vue_titre" class="vue_titre_zone"> 
 
             <h1>{{titre}}</h1>
 
@@ -25,15 +29,14 @@ vue_titre.component('compo-titre',{
     data() {
         return {
 
-            titres: ['Exposicion Actual', 'Exposiciones Anteriores', 'Artistas', 'Galeria']
+            titres: ['Exposicion Actual', 'Exposiciones Anteriores', 'Artistas', 'Informacion'],
 
         }
     },
 
     computed: {
-        titre(no_page) {
-            return this.titres[0]
-            var x = false
+        titre() {
+            return this.titres[this.no_page]
         }
     },
 

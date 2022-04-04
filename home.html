@@ -15,6 +15,9 @@
     <link rel="shortcut icon" href="Images/Logos/agg.png" type="image/png">
     <link rel="icon" href="Images/Logos/agg.png" type="image/png">
     <link rel="apple-touch-icon" href="Images/Logos/agg.png">
+
+    <script src="https://unpkg.com/vue@3"></script>
+
     
 
     <title>Alonso Garces Galeria</title>
@@ -44,7 +47,7 @@
 
     <div class="body_zone">
 
-        <div class="menu">
+        <div class="menu" id="vue-menu">
 
             <div class="menu_left">
 
@@ -69,6 +72,7 @@
             </div>
 
 
+
             <div class="menu_right">
 
                 <div class="settings">
@@ -79,6 +83,12 @@
                 </div>
             </div>
 
+
+        </div>
+
+        <div id="vue_titre" class="vue_titre_zone">
+
+            <compo-titre no_page = 0></compo-titre>
 
         </div>
 
@@ -192,7 +202,8 @@
     </footer>
 
 
-<script src="Scripts/main.js"></script>
+<script src="/Scripts/main.js"></script>
+<script src="/Scripts/components/titre.js"></script>
 
 </body>
 

@@ -611,16 +611,3 @@ body{
 .mailpro{
     color:#D40004;
 }
-
-
-.vue_titre_zone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-
-    /* background-color: #D40004; */
-
-    margin-top: 2vh;
-}

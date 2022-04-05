@@ -2,6 +2,7 @@ const jarvis = {
 
     hello_there() {
         console.log("Hello there")
+        console.log("I'm Jarvis")
     },
 
     

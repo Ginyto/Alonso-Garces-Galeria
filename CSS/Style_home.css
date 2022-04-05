@@ -615,7 +615,7 @@ body{
 
 .vue_titre_zone{
     display: flex;
-    justify-content: center;
+    justify-content:baseline;
     align-items: center;
 
     width: 100%;

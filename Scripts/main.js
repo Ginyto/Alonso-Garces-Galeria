@@ -2,6 +2,7 @@ const jarvis = {
 
     hello_there() {
         console.log("Hello there")
+        console.log("I'm Jarvis")
     },
 
     
@@ -101,7 +102,7 @@ const jarvis = {
 
                 else if (no_page === 1) {
 
-                    this.loading_capsule("expo_zone", base.expo, 0, "cap", 1, 0)
+                    this.loading_capsule("expo_zone", base.expo, 0, "cap", 0, 0)
 
                 }
 

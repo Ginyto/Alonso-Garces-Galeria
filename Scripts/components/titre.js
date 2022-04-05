@@ -29,7 +29,7 @@ vue_titre.component('compo-titre', {
     data() {
         return {
 
-            titres: ['Exposicion Actual', 'Exposiciones Anteriores', 'Artistas', 'Informacion'],
+            titres: ['Actual', 'Exposiciones', 'Artistas', 'Informacion'],
 
         }
     },

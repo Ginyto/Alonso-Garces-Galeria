@@ -13,6 +13,10 @@ const menu = Vue.createApp({
 
 menu.component('compo-menu', {
 
+    template:
+        /*html*/
+        `</h1>Menu</h1>`,
+
     props: {
 
     },

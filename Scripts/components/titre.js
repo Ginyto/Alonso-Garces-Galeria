@@ -15,7 +15,7 @@ const vue_titre = Vue.createApp({
 vue_titre.component('compo-titre', {
 
     props: {
-        no_page: Number
+        no_page: 0
     },
     
     template:

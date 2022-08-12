@@ -29,7 +29,7 @@ vue_titre.component('compo-titre', {
     data() {
         return {
 
-            titres: ['Proximámente  Inauguración Sábado 03 de Septiembre del 2022 - 11:00 a.m.', 'Exposiciones', 'Artistas', 'Informacion'],
+            titres: ['Proxima exposición "Testimonio de vida" de Umberto Giangrandi Inauguración : Sábado 03 de Septiembre del 2022 - 11:00 a.m.', 'Exposiciones', 'Artistas', 'Informacion'],
 
         }
     },

@@ -29,7 +29,7 @@ vue_titre.component('compo-titre', {
     data() {
         return {
 
-            titres: ['Actual "Testimonio de vida" de Umberto Giangrandi Inauguración : Sábado 03 de Septiembre 2022 - 11:00 a.m.', 'Exposiciones', 'Artistas', 'Informacion'],
+            titres: ['Actual: "preludio para la Cruz" exposición de Manolo Vellojin Inauguración : Sábado 22 de octubre 2022 - 11 a.m Hora: 11 a.m', 'Exposiciones', 'Artistas', 'Informacion'],
 
         }
     },

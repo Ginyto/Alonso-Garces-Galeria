@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"start": "npx http-server -P http://127.0.0.1:${PORT}/home.html",
+		"start": "npx http-server -p 0",
 		"dev": "nodemon --watch src --exec \"npm start\""
 	},
 	"dependencies": {

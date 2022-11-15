@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"start": "npx http-server -p 0",
+		"start": "npx http-server",
 		"dev": "nodemon --watch src --exec \"npm start\""
 	},
 	"dependencies": {
